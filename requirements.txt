@@ -1,4 +1,10 @@
-numpy>=2.0
-sounddevice>=0.5
-opencc-python-reimplemented>=0.1.7
-pydantic>=2.12
+annotated-types==0.7.0
+cffi==2.0.0
+numpy==2.4.3
+opencc-python-reimplemented==0.1.7
+pycparser==3.0
+pydantic==2.12.5
+pydantic_core==2.41.5
+sounddevice==0.5.5
+typing-inspection==0.4.2
+typing_extensions==4.15.0
