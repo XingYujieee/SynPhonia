@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "session_id": "c4edee4cc7104617aa8b36fb5463fb3d",
+      "event_id": "6c6604b4b849445c8428305c32153b8f",
+      "event_type": "transcription",
+      "source_chunk_id": "direct-chunk-00001",
+      "timestamp_start": 0.0,
+      "timestamp_end": 6.0,
+      "text": "还有在Redmi中添加一下对于优化时适合节能用的方式",
+      "language": "zh",
+      "confidence": 0.0,
+      "is_final": true,
+      "model_name": "small",
+      "speaker_id": null,
+      "tokens_count": 1
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+numpy>=2.0
+sounddevice>=0.5
+opencc-python-reimplemented>=0.1.7
+pydantic>=2.12

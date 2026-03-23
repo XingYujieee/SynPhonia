@@ -1,0 +1,17 @@
+# 忽略 Python 虚拟环境
+.venv313/
+venv/
+ENV/
+__pycache__/
+*.pyc
+
+# 忽略 Whisper 模型文件 (非常大，不建议上传)
+models/*.bin
+*.bin
+
+# 忽略 Mac 系统文件
+.DS_Store
+
+# 忽略音频测试文件
+*.wav
+*.mp3
