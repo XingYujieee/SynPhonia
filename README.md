@@ -77,7 +77,7 @@ SynPhonia 是一个以桌面端为主的可运行 MVP：
   - 可从工作区产物重建活动记录
   - 提供总览、图谱、文件预览三类面板
 
-完整视频链接: 
+完整视频链接: [Bilibili](https://www.bilibili.com/video/BV1Mnd5BhE26/?share_source=copy_web&vd_source=45ce2540abc418ea2598616e8df07850)
 
 ### 代码层面的关键策略
 
