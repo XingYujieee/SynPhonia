@@ -1,0 +1,31 @@
+{
+  "activity_id": "c66df89f622942b8baa89fafc0d729ec",
+  "start_time": "2026-04-15T07:00:27.493064+00:00",
+  "end_time": "2026-04-15T07:05:25.233064+00:00",
+  "summary_text": "讲座分析了图像质量评估方法，指出MSE虽能计算像素误差但忽略结构信息，因此median filter虽MSE最低却导致细节丢失。进而引入SSIM指标，它综合亮度、对比度和结构进行评估，更符合人类视觉感知。最后提到传统滤波器如LPF和Gaussian filter会模糊图像，而NLM（非局部均值）方法通过扫描整个区域来更好区分噪声与细节。",
+  "keywords": [
+    "MSE",
+    "SSIM",
+    "median filter",
+    "LPF",
+    "noise reduction"
+  ],
+  "transcript_artifact_path": "lite_synphonia/.tmp_test_runs/kb_workspace/records/c66df89f622942b8baa89fafc0d729ec/transcript.txt",
+  "summary_artifact_path": "lite_synphonia/.tmp_test_runs/kb_workspace/records/c66df89f622942b8baa89fafc0d729ec/summary.txt",
+  "ppt_present": false,
+  "ppt_file_path": null,
+  "ppt_id": null,
+  "transcript_meta": {
+    "segment_count": 40,
+    "mean_confidence": 0.5633,
+    "recorded_seconds": 300.0,
+    "language": "zh"
+  },
+  "summary_meta": {
+    "rounds": 1,
+    "model": "deepseek-chat"
+  },
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": null
+}

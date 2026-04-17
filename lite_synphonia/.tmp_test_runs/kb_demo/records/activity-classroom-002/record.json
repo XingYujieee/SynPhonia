@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-002",
+  "start_time": "2026-04-03T09:00:00",
+  "end_time": "2026-04-03T10:05:00",
+  "summary_text": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+  "keywords": [
+    "窗口大小",
+    "overlap",
+    "延迟预算"
+  ],
+  "transcript_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/transcript.txt",
+  "summary_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week01.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "classroom"
+}

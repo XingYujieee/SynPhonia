@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-003",
+  "start_time": "2026-04-10T09:00:00",
+  "end_time": "2026-04-10T09:50:00",
+  "summary_text": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+  "keywords": [
+    "课程通知",
+    "窗口大小",
+    "总结质量"
+  ],
+  "transcript_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-003/transcript.txt",
+  "summary_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-003/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week02.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": "包含课程通知页、答疑时间页和参数回顾页。",
+  "scene_type": "classroom"
+}

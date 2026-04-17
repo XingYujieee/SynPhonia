@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-04-15T07:06:25.820266+00:00",
+  "completed": true,
+  "config": {
+    "input_path": "lite_synphonia/.tmp_test_runs/pipeline_run/input/transcript.txt",
+    "output_path": "lite_synphonia/.tmp_test_runs/pipeline_run/summary/results.json",
+    "incremental_read_size": 1200,
+    "window_size": 200,
+    "overlap_size": 60,
+    "step_size": 140,
+    "llm_backend": "api",
+    "encoding": "utf-8",
+    "api": {
+      "base_url": "https://api.deepseek.com/v1",
+      "model_id": "deepseek-chat",
+      "api_key_env": "",
+      "max_new_tokens": 384,
+      "temperature": 0.1,
+      "timeout_seconds": 60.0,
+      "max_retries": 3,
+      "provider_name": "deepseek"
+    }
+  },
+  "results": [
+    {
+      "round_number": 1,
+      "window_start_index": 0,
+      "window_end_index": 199,
+      "input_word_count": 200,
+      "input_text": "这就是待会回来最忙的嗯 网读一下要不给我搜吧这个可以啊现在换一个 我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三 問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍 这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对 这个画图画面就这些画的都不知道吗可以的 d70strikewe arewe found that 60with the goldie lock soundkill the stripes and brought our msc down to 0.0299but we still have some greenness and slightto deal withface tospace filterwonderstandard median and gaussian filter were a bit of a disasterthey blurred everythingand gaussian actually had the worst msc at 0.0301the median filter was the clear winner herehitting an mse of 0.0178it's definitely the king of handling that salt and pepperslide 5the pipeline integrationsince no single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf plus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎 slide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well we move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide critical analysis 我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數 mse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba ssim評測 就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页 ssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim 测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo 其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel perfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题 我们的眼睛比完美图形更在乎结构第九个 模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个 也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian filter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍 nlm or non-local means comes inyou can see the workflow hereinstead of just averaging the pixels right next to",
+      "keywords": [
+        "MSE",
+        "SSIM",
+        "median filter",
+        "LPF",
+        "noise reduction"
+      ],
+      "summary": "讲座分析了图像质量评估方法，指出MSE虽能计算像素误差但忽略结构信息，因此median filter虽MSE最低却导致细节丢失。进而引入SSIM指标，它综合亮度、对比度和结构进行评估，更符合人类视觉感知。最后提到传统滤波器如LPF和Gaussian filter会模糊图像，而NLM（非局部均值）方法通过扫描整个区域来更好区分噪声与细节。",
+      "status": "success",
+      "raw_response": "{\"keywords\":[\"MSE\",\"SSIM\",\"median filter\",\"LPF\",\"noise reduction\"],\"summary\":\"讲座分析了图像质量评估方法，指出MSE虽能计算像素误差但忽略结构信息，因此median filter虽MSE最低却导致细节丢失。进而引入SSIM指标，它综合亮度、对比度和结构进行评估，更符合人类视觉感知。最后提到传统滤波器如LPF和Gaussian filter会模糊图像，而NLM（非局部均值）方法通过扫描整个区域来更好区分噪声与细节。\"}",
+      "error_message": "",
+      "generation_seconds": 5.12
+    }
+  ],
+  "runtime": {
+    "active_backend": "api",
+    "provider_name": "deepseek",
+    "model_id": "deepseek-chat",
+    "round_count": 1,
+    "input_word_count": 244
+  },
+  "stage_status": {
+    "stage": "summary",
+    "status": "success",
+    "reason": "Summary completed successfully.",
+    "upstream_dependency": "transcription",
+    "quality_decision": "pass",
+    "details": {
+      "active_backend": "api",
+      "provider": "deepseek"
+    }
+  }
+}

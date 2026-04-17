@@ -1,0 +1,186 @@
+{
+  "runtime": {
+    "language": "en",
+    "backend": "fixture",
+    "silence_floor": 0.003,
+    "limiter_level": 0.92,
+    "initial_prompt": "MSE, FFT, LPF, Gaussian, Median, SSIM, NLM, Group 23",
+    "glossary_terms": [
+      "MSE",
+      "FFT",
+      "LPF",
+      "Gaussian",
+      "Median",
+      "SSIM",
+      "NLM",
+      "Group 23"
+    ]
+  },
+  "metrics": {
+    "mode": "fixture",
+    "language": "en",
+    "requested_seconds": 152.0,
+    "recorded_seconds": 152.0,
+    "sample_count": 2432000,
+    "chunk_count": 304,
+    "rms": 0.082,
+    "peak": 0.57,
+    "transcribe_calls": 1,
+    "raw_segments": 24,
+    "cleaned_segments": 24,
+    "filtered_segments": 0,
+    "emitted_segments": 24,
+    "final_segments": 24,
+    "transcription_seconds": 1.12,
+    "notes": [
+      "Synthetic transcription generated from test_source/oral.md for page-aligned PDF matching tests."
+    ]
+  },
+  "events": [],
+  "results": [
+    {
+      "text": "Good morning. We are Group 23, and this Research Presentation studies the synergy of frequency-domain and spatial-domain filtering.",
+      "t0": 0.0,
+      "t1": 6.0,
+      "lang": "en"
+    },
+    {
+      "text": "Our core challenge is simple: MSE often looks precise, but it may not reflect real visual quality.",
+      "t0": 6.0,
+      "t1": 12.0,
+      "lang": "en"
+    },
+    {
+      "text": "We first diagnosed the mixed noise model with the FFT spectrum. The image contains stripe noise and salt-and-pepper noise.",
+      "t0": 12.0,
+      "t1": 18.0,
+      "lang": "en"
+    },
+    {
+      "text": "So our four-step strategy is spectrum analysis, LPF cleanup, spatial refinement with Median or NLM, and evaluation with MSE and SSIM.",
+      "t0": 18.0,
+      "t1": 24.0,
+      "lang": "en"
+    },
+    {
+      "text": "Stage one focuses on LPF parameter tuning. The key variable is the cutoff frequency D0 for removing periodic stripes.",
+      "t0": 24.0,
+      "t1": 30.0,
+      "lang": "en"
+    },
+    {
+      "text": "D0 at 70 under-filters, D0 at 50 over-smooths, and D0 at 60 gives the best balance with MSE 0.0299.",
+      "t0": 30.0,
+      "t1": 36.0,
+      "lang": "en"
+    },
+    {
+      "text": "Stage two tests baseline spatial filters: Mean, Gaussian, and Median.",
+      "t0": 36.0,
+      "t1": 42.0,
+      "lang": "en"
+    },
+    {
+      "text": "Gaussian is worst at 0.0301, Mean degrades edges, and Median reaches 0.0178 and handles impulse noise best.",
+      "t0": 42.0,
+      "t1": 48.0,
+      "lang": "en"
+    },
+    {
+      "text": "Then we built a hybrid pipeline by chaining LPF with spatial filtering.",
+      "t0": 48.0,
+      "t1": 54.0,
+      "lang": "en"
+    },
+    {
+      "text": "The best traditional combination is LPF plus Median, with MSE 0.0294 and stronger robustness on mixed noise.",
+      "t0": 54.0,
+      "t1": 60.0,
+      "lang": "en"
+    },
+    {
+      "text": "At this point the numbers create a visual illusion. The lowest MSE does not automatically mean the best-looking restoration.",
+      "t0": 60.0,
+      "t1": 66.0,
+      "lang": "en"
+    },
+    {
+      "text": "That is why we questioned whether the apparent winner on paper actually preserves local detail and texture.",
+      "t0": 66.0,
+      "t1": 72.0,
+      "lang": "en"
+    },
+    {
+      "text": "The scientific weakness of MSE is that it only measures pixel intensity error.",
+      "t0": 72.0,
+      "t1": 78.0,
+      "lang": "en"
+    },
+    {
+      "text": "Median lowers MSE but over-smooths texture, so we need a metric that respects structure instead of only brightness differences.",
+      "t0": 78.0,
+      "t1": 84.0,
+      "lang": "en"
+    },
+    {
+      "text": "Our upgraded evaluation uses SSIM, which compares luminance, contrast, and structure.",
+      "t0": 84.0,
+      "t1": 90.0,
+      "lang": "en"
+    },
+    {
+      "text": "With SSIM the ranking reverses: Median drops to fifth place, while LPF plus Mean rises to the top with SSIM 0.601.",
+      "t0": 90.0,
+      "t1": 96.0,
+      "lang": "en"
+    },
+    {
+      "text": "Classic filters still share a bottleneck: isotropic smoothing and weak edge-awareness.",
+      "t0": 96.0,
+      "t1": 102.0,
+      "lang": "en"
+    },
+    {
+      "text": "Gaussian shows this clearly with SSIM 0.507, because uniform smoothing destroys important structure.",
+      "t0": 102.0,
+      "t1": 108.0,
+      "lang": "en"
+    },
+    {
+      "text": "That leads to our core algorithm, NLM or Non-Local Means.",
+      "t0": 108.0,
+      "t1": 114.0,
+      "lang": "en"
+    },
+    {
+      "text": "NLM searches for similar patches, assigns weights by patch similarity, and preserves edges better than simple local averaging.",
+      "t0": 114.0,
+      "t1": 120.0,
+      "lang": "en"
+    },
+    {
+      "text": "Our final validation combines LPF with NLM as the ultimate solution.",
+      "t0": 120.0,
+      "t1": 126.0,
+      "lang": "en"
+    },
+    {
+      "text": "LPF plus NLM achieves the highest SSIM, 0.607, while keeping a strong MSE near 0.0293.",
+      "t0": 126.0,
+      "t1": 132.0,
+      "lang": "en"
+    },
+    {
+      "text": "So the final conclusion is structure first: collaborative frequency-domain and spatial-domain filtering is more reliable for mixed noise restoration.",
+      "t0": 132.0,
+      "t1": 142.0,
+      "lang": "en"
+    },
+    {
+      "text": "Thank you for listening. Group 23 concludes that SSIM is a better guide than MSE, and NLM gives the strongest final quality.",
+      "t0": 142.0,
+      "t1": 152.0,
+      "lang": "en"
+    }
+  ]
+}

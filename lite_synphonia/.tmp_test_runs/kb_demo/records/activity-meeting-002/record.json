@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-meeting-002",
+  "start_time": "2026-04-09T14:00:00",
+  "end_time": "2026-04-09T15:10:00",
+  "summary_text": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+  "keywords": [
+    "采购预算",
+    "供应商计划",
+    "成本控制"
+  ],
+  "transcript_artifact_path": ".tmp_test_runs/kb_demo/records/activity-meeting-002/transcript.txt",
+  "summary_artifact_path": ".tmp_test_runs/kb_demo/records/activity-meeting-002/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/meeting_budget_review.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": "预算对比页、供应商计划页、评审时间页。",
+  "scene_type": "meeting"
+}

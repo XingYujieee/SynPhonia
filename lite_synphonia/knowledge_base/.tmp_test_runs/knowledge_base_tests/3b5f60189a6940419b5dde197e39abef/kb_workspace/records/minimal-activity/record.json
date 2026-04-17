@@ -1,0 +1,20 @@
+{
+  "activity_id": "minimal-activity",
+  "start_time": "2026-04-05T10:00:00",
+  "end_time": "2026-04-05T10:45:00",
+  "summary_text": "这是一次最小输入活动的总结。",
+  "keywords": [
+    "最小输入",
+    "活动"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/3b5f60189a6940419b5dde197e39abef/kb_workspace/records/minimal-activity/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/3b5f60189a6940419b5dde197e39abef/kb_workspace/records/minimal-activity/summary.txt",
+  "ppt_present": false,
+  "ppt_file_path": null,
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": null
+}

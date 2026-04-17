@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-001",
+  "start_time": "2026-04-01T09:00:00",
+  "end_time": "2026-04-01T10:15:00",
+  "summary_text": "活动重点是延迟预算、增量读取和窗口大小。",
+  "keywords": [
+    "延迟预算",
+    "增量读取",
+    "窗口大小"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/d2227fac4cfa4e96958368f9c3d6bb67/kb_workspace/records/activity-classroom-001/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/d2227fac4cfa4e96958368f9c3d6bb67/kb_workspace/records/activity-classroom-001/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/d2227fac4cfa4e96958368f9c3d6bb67/assets/classroom_week01.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "classroom"
+}

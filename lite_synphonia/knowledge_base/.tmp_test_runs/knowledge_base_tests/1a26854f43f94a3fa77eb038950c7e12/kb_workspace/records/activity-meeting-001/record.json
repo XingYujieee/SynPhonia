@@ -1,0 +1,20 @@
+{
+  "activity_id": "activity-meeting-001",
+  "start_time": "2026-04-02T14:00:00",
+  "end_time": "2026-04-02T15:00:00",
+  "summary_text": "会议讨论采购预算和成本控制。",
+  "keywords": [
+    "采购预算",
+    "成本控制"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/1a26854f43f94a3fa77eb038950c7e12/kb_workspace/records/activity-meeting-001/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/1a26854f43f94a3fa77eb038950c7e12/kb_workspace/records/activity-meeting-001/summary.txt",
+  "ppt_present": false,
+  "ppt_file_path": null,
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "meeting"
+}

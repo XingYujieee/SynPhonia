@@ -1,0 +1,2747 @@
+{
+  "generated_at_utc": "2026-04-15T07:45:36.765660+00:00",
+  "source": {
+    "tool": "lite_synphonia",
+    "version": "0.1.0",
+    "run_started_at_utc": "2026-04-15T07:40:00.030209+00:00",
+    "transcription_provider": "deepgram",
+    "summarization_provider": "deepseek",
+    "embedding_provider": "siliconflow-embed",
+    "pdf_path": "/Users/xingyujie/Desktop/code/lite_synphonia/test_source/test.pdf",
+    "activity_id": ""
+  },
+  "stage_status": {
+    "transcription": {
+      "stage": "transcription",
+      "status": "success",
+      "reason": "Transcript quality passed heuristic checks.",
+      "details": {
+        "decision": "pass",
+        "score": 1.0
+      }
+    },
+    "summary": {
+      "stage": "summary",
+      "status": "success",
+      "reason": "Summary completed successfully.",
+      "upstream_dependency": "transcription",
+      "quality_decision": "pass",
+      "details": {
+        "active_backend": "api",
+        "provider": "deepseek"
+      }
+    },
+    "pdf_matching": {
+      "stage": "pdf_matching",
+      "status": "success",
+      "reason": "PDF matching completed.",
+      "upstream_dependency": "transcription",
+      "details": {
+        "embedding_provider": "siliconflow-embed"
+      }
+    }
+  },
+  "transcript": {
+    "source_label": "deepgram_api",
+    "unit_count": 28,
+    "word_count": 79,
+    "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r\n問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看\n可以看出照片的好看性或者是有更好的方法slide\nr 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條\nlpfand\nplayed around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but\nwe still had some graininessand slight blurring to deal withslide\n4phase 2spatial filter baselinenext\nwe\nwondered\n听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的\n我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对\n来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置\n我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧\n我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互\n你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好\n是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对\n错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告\n你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转\n这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的\n那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个\n在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi\nedge你知道线啊我知道就是它是跟你线去连贯\n可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi\nedge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s\n如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片\n这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊\n你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+    "units": [
+      {
+        "unit_id": 0,
+        "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+        "t0": 0.06,
+        "t1": 0.98,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 1,
+        "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+        "t0": 7.7700005,
+        "t1": 8.27,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 2,
+        "text": "可以看出照片的好看性或者是有更好的方法slide",
+        "t0": 15.06,
+        "t1": 15.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 3,
+        "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+        "t0": 19.34,
+        "t1": 20.32,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 4,
+        "text": "lpfand",
+        "t0": 60.18,
+        "t1": 60.68,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 5,
+        "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+        "t0": 61.4,
+        "t1": 77.3,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 6,
+        "text": "we still had some graininessand slight blurring to deal withslide",
+        "t0": 79.24,
+        "t1": 82.64,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 7,
+        "text": "4phase 2spatial filter baselinenext",
+        "t0": 83.54,
+        "t1": 86.52,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 8,
+        "text": "we",
+        "t0": 87.365,
+        "t1": 87.865,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 9,
+        "text": "wondered",
+        "t0": 88.71,
+        "t1": 89.21,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 10,
+        "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+        "t0": 90.055,
+        "t1": 90.555,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 11,
+        "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+        "t0": 91.4,
+        "t1": 91.9,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 12,
+        "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+        "t0": 98.29,
+        "t1": 98.79,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 13,
+        "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+        "t0": 105.18,
+        "t1": 105.68,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 14,
+        "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+        "t0": 120.84,
+        "t1": 121.34,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 15,
+        "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+        "t0": 135.3,
+        "t1": 135.8,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 16,
+        "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+        "t0": 150.06,
+        "t1": 151.34,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 17,
+        "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+        "t0": 157.95,
+        "t1": 158.45,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 18,
+        "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+        "t0": 165.06,
+        "t1": 165.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 19,
+        "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+        "t0": 180.18,
+        "t1": 180.68,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 20,
+        "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+        "t0": 195.84,
+        "t1": 196.34,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 21,
+        "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+        "t0": 210.06,
+        "t1": 210.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 22,
+        "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+        "t0": 217.56,
+        "t1": 218.06,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 23,
+        "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+        "t0": 225.06,
+        "t1": 225.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 24,
+        "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+        "t0": 232.36,
+        "t1": 232.86,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 25,
+        "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+        "t0": 255.06,
+        "t1": 255.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 26,
+        "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+        "t0": 270.06,
+        "t1": 270.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 27,
+        "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+        "t0": 286.4,
+        "t1": 286.9,
+        "source": "deepgram_api"
+      }
+    ]
+  },
+  "transcription": {
+    "runtime": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "chunk_duration_ms": 500,
+      "silence_floor": 0.003,
+      "input_gain": 1.0,
+      "target_rms": 0.03,
+      "max_gain": 2.0,
+      "limiter_level": 0.72,
+      "pre_emphasis_coeff": 0.97,
+      "language": "zh",
+      "has_initial_prompt": false,
+      "glossary_size": 0
+    },
+    "metrics": {
+      "mode": "direct_api",
+      "language": "zh",
+      "requested_seconds": 300.0,
+      "recorded_seconds": 300.0,
+      "sample_count": 4800000,
+      "chunk_count": 600,
+      "rms": 0.012725482694804668,
+      "peak": 0.5733235478401184,
+      "transcription_seconds": 30.606360625009984,
+      "raw_segments": 28,
+      "cleaned_segments": 28,
+      "filtered_segments": 0,
+      "emitted_segments": 28,
+      "final_segments": 28,
+      "transcribe_calls": 1
+    },
+    "events": [
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "f4d427858cd84e6aba36876a25e382d0",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 0.06,
+        "timestamp_end": 0.98,
+        "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+        "language": "zh-CN",
+        "confidence": 0.19886358,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "a2dd8de0d6a143eeaecccc9048212823",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 7.7700005,
+        "timestamp_end": 8.27,
+        "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+        "language": "zh-CN",
+        "confidence": 0.42541817,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "67daaf1dabd84d169b265cbfefb272b0",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 15.06,
+        "timestamp_end": 15.56,
+        "text": "可以看出照片的好看性或者是有更好的方法slide",
+        "language": "zh-CN",
+        "confidence": 0.21406688,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "4ea3894b86c042edae2a0c4d1fa2c25e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 19.34,
+        "timestamp_end": 20.32,
+        "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+        "language": "zh-CN",
+        "confidence": 0.35879934,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "686ccaed0da64653ae750da81e15ea9b",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 60.18,
+        "timestamp_end": 60.68,
+        "text": "lpfand",
+        "language": "zh-CN",
+        "confidence": 0.9912451,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "dd7320469efb4661896dfd0662bf46f4",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 61.4,
+        "timestamp_end": 77.3,
+        "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+        "language": "zh-CN",
+        "confidence": 0.69000477,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 35
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "124f53a3fbe2461fba782552df5912aa",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 79.24,
+        "timestamp_end": 82.64,
+        "text": "we still had some graininessand slight blurring to deal withslide",
+        "language": "zh-CN",
+        "confidence": 0.6765663,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 10
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "d3e697fec24d4615b89286dd88209d4a",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 83.54,
+        "timestamp_end": 86.52,
+        "text": "4phase 2spatial filter baselinenext",
+        "language": "zh-CN",
+        "confidence": 0.7515385,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 4
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "5348bf7c73c1447bbab4a2c464845389",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 87.365,
+        "timestamp_end": 87.865,
+        "text": "we",
+        "language": "zh-CN",
+        "confidence": 0.24997494,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "4cc6e0488b9b4e2288bd4315320f47a0",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 88.71,
+        "timestamp_end": 89.21,
+        "text": "wondered",
+        "language": "zh-CN",
+        "confidence": 0.9591045,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "2cab66be3f71443aa1d5e3516b43d28f",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 90.055,
+        "timestamp_end": 90.555,
+        "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+        "language": "zh-CN",
+        "confidence": 0.45678127,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "b5575a53edfb4adc8cb5b7c580b9bb51",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 91.4,
+        "timestamp_end": 91.9,
+        "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+        "language": "zh-CN",
+        "confidence": 0.46980974,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "71dfb2fd83c84c4cad28cc5f6d0c6d75",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 98.29,
+        "timestamp_end": 98.79,
+        "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+        "language": "zh-CN",
+        "confidence": 0.635625,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "90a6c6b86fe74f798e6c6366ff40abc6",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 105.18,
+        "timestamp_end": 105.68,
+        "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+        "language": "zh-CN",
+        "confidence": 0.101136245,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "12419ba5bbdc42a2aa70a3f8d266adde",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 120.84,
+        "timestamp_end": 121.34,
+        "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+        "language": "zh-CN",
+        "confidence": 0.12508991,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "636d153fe0d14c4cb8f15dfd8a9f021f",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 135.3,
+        "timestamp_end": 135.8,
+        "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+        "language": "zh-CN",
+        "confidence": 0.9889551,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "9fc212b458ba4a72a5f6b53d7634bc58",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 150.06,
+        "timestamp_end": 151.34,
+        "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+        "language": "zh-CN",
+        "confidence": 0.70232344,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "7a78831dc6ff4aceb38a80c8e92b053e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 157.95,
+        "timestamp_end": 158.45,
+        "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+        "language": "zh-CN",
+        "confidence": 0.51401395,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "4fb30cc0d8ae4929bc533db31f3b5b6d",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 165.06,
+        "timestamp_end": 165.56,
+        "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+        "language": "zh-CN",
+        "confidence": 0.1932261,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "c56bb6f66a39413dbbc97d9184daf289",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 180.18,
+        "timestamp_end": 180.68,
+        "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+        "language": "zh-CN",
+        "confidence": 0.66149706,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "e574c45829f8401b8e00cd85d617619f",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 195.84,
+        "timestamp_end": 196.34,
+        "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+        "language": "zh-CN",
+        "confidence": 0.9999901,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "181cb77fc6894db793f1a24658c8d528",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 210.06,
+        "timestamp_end": 210.56,
+        "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+        "language": "zh-CN",
+        "confidence": 0.7393591,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "003357f6ed254f23856f99dde2e69072",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 217.56,
+        "timestamp_end": 218.06,
+        "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+        "language": "zh-CN",
+        "confidence": 0.96504086,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "ae915eee45ee4b1384eba10f6a76407c",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 225.06,
+        "timestamp_end": 225.56,
+        "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+        "language": "zh-CN",
+        "confidence": 0.54753876,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "e68292f98f02410ea644c3fcc57e5a2e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 232.36,
+        "timestamp_end": 232.86,
+        "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+        "language": "zh-CN",
+        "confidence": 0.78955394,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "5e6a2731d8c94e96ad91acf6b9a69521",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 255.06,
+        "timestamp_end": 255.56,
+        "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+        "language": "zh-CN",
+        "confidence": 0.104999125,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 3
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "b5e649d7f6a1482288a9116e4c0bfc81",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 270.06,
+        "timestamp_end": 270.56,
+        "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+        "language": "zh-CN",
+        "confidence": 0.98158723,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "d7728260393f427c92aa51b1290c6127",
+        "event_id": "9f164949ab0a4837ba9abbbc159bf029",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 286.4,
+        "timestamp_end": 286.9,
+        "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+        "language": "zh-CN",
+        "confidence": 0.64083743,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      }
+    ],
+    "results": [
+      {
+        "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+        "t0": 0.06,
+        "t1": 0.98,
+        "lang": "zh-CN",
+        "confidence": 0.19886358
+      },
+      {
+        "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+        "t0": 7.7700005,
+        "t1": 8.27,
+        "lang": "zh-CN",
+        "confidence": 0.42541817
+      },
+      {
+        "text": "可以看出照片的好看性或者是有更好的方法slide",
+        "t0": 15.06,
+        "t1": 15.56,
+        "lang": "zh-CN",
+        "confidence": 0.21406688
+      },
+      {
+        "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+        "t0": 19.34,
+        "t1": 20.32,
+        "lang": "zh-CN",
+        "confidence": 0.35879934
+      },
+      {
+        "text": "lpfand",
+        "t0": 60.18,
+        "t1": 60.68,
+        "lang": "zh-CN",
+        "confidence": 0.9912451
+      },
+      {
+        "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+        "t0": 61.4,
+        "t1": 77.3,
+        "lang": "zh-CN",
+        "confidence": 0.69000477
+      },
+      {
+        "text": "we still had some graininessand slight blurring to deal withslide",
+        "t0": 79.24,
+        "t1": 82.64,
+        "lang": "zh-CN",
+        "confidence": 0.6765663
+      },
+      {
+        "text": "4phase 2spatial filter baselinenext",
+        "t0": 83.54,
+        "t1": 86.52,
+        "lang": "zh-CN",
+        "confidence": 0.7515385
+      },
+      {
+        "text": "we",
+        "t0": 87.365,
+        "t1": 87.865,
+        "lang": "zh-CN",
+        "confidence": 0.24997494
+      },
+      {
+        "text": "wondered",
+        "t0": 88.71,
+        "t1": 89.21,
+        "lang": "zh-CN",
+        "confidence": 0.9591045
+      },
+      {
+        "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+        "t0": 90.055,
+        "t1": 90.555,
+        "lang": "zh-CN",
+        "confidence": 0.45678127
+      },
+      {
+        "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+        "t0": 91.4,
+        "t1": 91.9,
+        "lang": "zh-CN",
+        "confidence": 0.46980974
+      },
+      {
+        "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+        "t0": 98.29,
+        "t1": 98.79,
+        "lang": "zh-CN",
+        "confidence": 0.635625
+      },
+      {
+        "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+        "t0": 105.18,
+        "t1": 105.68,
+        "lang": "zh-CN",
+        "confidence": 0.101136245
+      },
+      {
+        "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+        "t0": 120.84,
+        "t1": 121.34,
+        "lang": "zh-CN",
+        "confidence": 0.12508991
+      },
+      {
+        "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+        "t0": 135.3,
+        "t1": 135.8,
+        "lang": "zh-CN",
+        "confidence": 0.9889551
+      },
+      {
+        "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+        "t0": 150.06,
+        "t1": 151.34,
+        "lang": "zh-CN",
+        "confidence": 0.70232344
+      },
+      {
+        "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+        "t0": 157.95,
+        "t1": 158.45,
+        "lang": "zh-CN",
+        "confidence": 0.51401395
+      },
+      {
+        "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+        "t0": 165.06,
+        "t1": 165.56,
+        "lang": "zh-CN",
+        "confidence": 0.1932261
+      },
+      {
+        "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+        "t0": 180.18,
+        "t1": 180.68,
+        "lang": "zh-CN",
+        "confidence": 0.66149706
+      },
+      {
+        "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+        "t0": 195.84,
+        "t1": 196.34,
+        "lang": "zh-CN",
+        "confidence": 0.9999901
+      },
+      {
+        "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+        "t0": 210.06,
+        "t1": 210.56,
+        "lang": "zh-CN",
+        "confidence": 0.7393591
+      },
+      {
+        "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+        "t0": 217.56,
+        "t1": 218.06,
+        "lang": "zh-CN",
+        "confidence": 0.96504086
+      },
+      {
+        "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+        "t0": 225.06,
+        "t1": 225.56,
+        "lang": "zh-CN",
+        "confidence": 0.54753876
+      },
+      {
+        "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+        "t0": 232.36,
+        "t1": 232.86,
+        "lang": "zh-CN",
+        "confidence": 0.78955394
+      },
+      {
+        "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+        "t0": 255.06,
+        "t1": 255.56,
+        "lang": "zh-CN",
+        "confidence": 0.104999125
+      },
+      {
+        "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+        "t0": 270.06,
+        "t1": 270.56,
+        "lang": "zh-CN",
+        "confidence": 0.98158723
+      },
+      {
+        "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+        "t0": 286.4,
+        "t1": 286.9,
+        "lang": "zh-CN",
+        "confidence": 0.64083743
+      }
+    ],
+    "transcription_quality": {
+      "decision": "pass",
+      "reason": "Transcript quality passed heuristic checks.",
+      "score": 1.0,
+      "stats": {
+        "segments": 28,
+        "chars": 2037,
+        "words": 79,
+        "mean_confidence": 0.5762,
+        "rms": 0.012725,
+        "peak": 0.573324
+      },
+      "checks": [
+        {
+          "name": "has_content",
+          "pass": true,
+          "value": 2037
+        },
+        {
+          "name": "confidence",
+          "pass": true,
+          "value": 0.5762
+        },
+        {
+          "name": "audio_level",
+          "pass": true,
+          "value": 0.012725
+        },
+        {
+          "name": "clipping",
+          "pass": true,
+          "value": false
+        },
+        {
+          "name": "glossary_hits",
+          "pass": true,
+          "value": 0
+        }
+      ]
+    },
+    "stage_status": {
+      "stage": "transcription",
+      "status": "success",
+      "reason": "Transcript quality passed heuristic checks.",
+      "details": {
+        "decision": "pass",
+        "score": 1.0
+      }
+    },
+    "glossary": {
+      "terms": [],
+      "prompt": ""
+    },
+    "preflight": null,
+    "transcription_backend": "deepgram_api"
+  },
+  "summary": {
+    "generated_at_utc": "2026-04-15T07:45:35.939732+00:00",
+    "completed": true,
+    "config": {
+      "input_path": "/Users/xingyujie/Desktop/code/lite_synphonia/.tmp_test_runs/pipeline_run_final/input/transcript.txt",
+      "output_path": "/Users/xingyujie/Desktop/code/lite_synphonia/.tmp_test_runs/pipeline_run_final/summary/results.json",
+      "incremental_read_size": 1200,
+      "window_size": 79,
+      "overlap_size": 60,
+      "step_size": 19,
+      "llm_backend": "api",
+      "encoding": "utf-8",
+      "api": {
+        "base_url": "https://api.deepseek.com/v1",
+        "model_id": "deepseek-chat",
+        "api_key_env": "",
+        "max_new_tokens": 384,
+        "temperature": 0.1,
+        "timeout_seconds": 60.0,
+        "max_retries": 3,
+        "provider_name": "deepseek"
+      }
+    },
+    "results": [
+      {
+        "round_number": 1,
+        "window_start_index": 0,
+        "window_end_index": 78,
+        "input_word_count": 79,
+        "input_text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r 問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看 可以看出照片的好看性或者是有更好的方法slide r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條 lpfand played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but we still had some graininessand slight blurring to deal withslide 4phase 2spatial filter baselinenext we wondered 听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的 我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对 来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置 我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧 我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互 你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好 是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对 错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告 你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转 这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的 那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个 在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi edge你知道线啊我知道就是它是跟你线去连贯 可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s 如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片 这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊 你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+        "keywords": [
+          "MSE",
+          "FFT",
+          "LPF",
+          "截止频率",
+          "空间滤波器"
+        ],
+        "summary": "讲座探讨了通过混合频域和空间域方法来优化图像质量评估，质疑MSE是否足以衡量照片质量。首先通过FFT分析图像噪声，使用LPF在截止频率60处有效去除条纹噪声，将MSE降至0.0299。进而结合空间滤波器进行两阶段处理，进一步将MSE优化至0.0294，证明了该混合方法的稳定改进效果。",
+        "status": "success",
+        "raw_response": "{\"keywords\":[\"MSE\",\"FFT\",\"LPF\",\"截止频率\",\"空间滤波器\"],\"summary\":\"讲座探讨了通过混合频域和空间域方法来优化图像质量评估，质疑MSE是否足以衡量照片质量。首先通过FFT分析图像噪声，使用LPF在截止频率60处有效去除条纹噪声，将MSE降至0.0299。进而结合空间滤波器进行两阶段处理，进一步将MSE优化至0.0294，证明了该混合方法的稳定改进效果。\"}",
+        "error_message": "",
+        "generation_seconds": 4.951
+      }
+    ],
+    "runtime": {
+      "active_backend": "api",
+      "provider_name": "deepseek",
+      "model_id": "deepseek-chat",
+      "round_count": 1,
+      "input_word_count": 79
+    },
+    "stage_status": {
+      "stage": "summary",
+      "status": "success",
+      "reason": "Summary completed successfully.",
+      "upstream_dependency": "transcription",
+      "quality_decision": "pass",
+      "details": {
+        "active_backend": "api",
+        "provider": "deepseek"
+      }
+    }
+  },
+  "pdf_matching": {
+    "generated_at_utc": "2026-04-15T07:45:36.761780+00:00",
+    "pages": [
+      {
+        "page_index": 0,
+        "page_label": "Page 1",
+        "text_available": true,
+        "text_preview": "频域与空域滤波的 协同效应研究 图像修复质量评估：超越传统像素级指标  探索“频域+空域”联合滤波在复杂图像修复中的协同效应 ⚠ 核⼼挑战：MSE 等传统指标在衡量真实视觉质量时的局限性 第 23 ⼩组 (Group 23) Resear",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 1,
+        "page_label": "Page 2",
+        "text_available": true,
+        "text_preview": "问题诊断：混合噪声模型的特征分析 噪声识别与定位 1. 周期性条纹噪声 (Stripe Noise) 频域特征：FFT 频谱中离中⼼的亮脉冲，代表特定频率的周期⼲扰。 2. 椒盐噪声 (Salt-and-Pepper) 空域特征：随机分布的",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 2,
+        "page_label": "Page 3",
+        "text_available": true,
+        "text_preview": "阶段⼀：频域滤波 (LPF) 的参数优化实验 算法配置 低通滤波器 (LPF) 主要⽤于滤除图像中的⾼频周期性条纹噪声。  核⼼变量：截⽌频率 ($D_0$) 截⽌频率对⽐实验 截⽌频率 \u0000$D_0$) 修复表现 评价结论 $D_0 = ",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 3,
+        "page_label": "Page 4",
+        "text_available": true,
+        "text_preview": "阶段⼆：空间域滤波器的基线性能测试 测试对象 均值滤波 (Mean) ⾼斯滤波 (Gaussian) 中值滤波 (Median)  旨在确⽴空域滤波在处理脉冲噪声时的“独⽴表现” 基准。 实验数据对⽐ 滤波器类型 MSE (越⼩越好) 视",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 4,
+        "page_label": "Page 5",
+        "text_available": true,
+        "text_preview": "集成⽅案：构建“频域 + 空域”混合流⽔线 集成策略： 串联 LPF ( 频域) 与经典空域滤波器，实现多维度噪声抑制。 输⼊受损图像  LPF ( 频域) 滤除周期性条纹  中值滤波 ( 空域) 抑制脉冲噪声  修复结果输出 性能指",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 5,
+        "page_label": "Page 6",
+        "text_available": true,
+        "text_preview": "数据反思：MSE 指标可能带来的“视觉假象” 数据回顾： 表⾯上看似最优的⽅法，在实际观感中是否成⽴？ 修复⽅法 MSE (越⼩越好) 视觉评价 单⼀中值滤波 0.0178 ( 领先) 疑似最优？ 混合滤波⽅案 0.0294 表现平平？ ",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 6,
+        "page_label": "Page 7",
+        "text_available": true,
+        "text_preview": "批判性分析：揭⽰ MSE 的科学缺陷  MSE 的物理本质 仅测量像素强度偏差，对图像的结构相⼲性极不 敏感。 产⽣的负⾯效应 倾向过度平滑，⾼频细节被抹平。  视觉证据分析 中值滤波虽降低 MSE ，但破坏纹理，导致质感 丧失。 → ",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 7,
+        "page_label": "Page 8",
+        "text_available": true,
+        "text_preview": "评价体系升级：引⼊结构相似性指数 (SSIM) 1. 亮度 (Luminance) 平均强度的⼀致性 2. 对⽐度 (Contrast) 信号幅值的保留度 3. 结构 (Structure) 边缘与纹理的相关性  排名⼤反转 (Ranki",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 8,
+        "page_label": "Page 9",
+        "text_available": true,
+        "text_preview": "传统滤波瓶颈：各向同性模糊的挑战 共同瓶颈分析 1. 缺乏边缘感知 (Edge-awareness) 传统滤波器⽆法区分图像的平滑区域与结构边缘，导致修复过程中“误伤”细节。 2. 各向同性 (Isotropic Smoothing) ⽆差",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 9,
+        "page_label": "Page 10",
+        "text_available": true,
+        "text_preview": "核⼼算法：⾮局部均值 (NLM) ⼯作原理 像素邻域 (Local)  图像块相似性 (Patch Similarity) 1. 搜索与匹配 在预设的搜索窗⼝内，寻找与当前图像块 (Patch) 结构相似的区域，⽽⾮局 限于相邻像素。 2",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 10,
+        "page_label": "Page 11",
+        "text_available": true,
+        "text_preview": "终极⽅案：LPF \u0000 NLM 的实验验证 终极⽅案集成结果： 频域低通滤波 + ⾮局部均值空间精修 最终 SSIM ( 全场最⾼) 0.607 最终 MSE ( 保持优秀) 0.0293  具备边缘感知和全局⾃相似性的算法在复杂修复任务中",
+        "chunk_count": 1
+      },
+      {
+        "page_index": 11,
+        "page_label": "Page 12",
+        "text_available": true,
+        "text_preview": "研究总结与贡献 协同⽅案： 验证了“频域+空域”联合滤波在复杂图像修复中的鲁棒 性。 评价⾰新： 明确了 SSIM 指标在图像结构真实性评估中的核⼼地位。 算法验证： 证明了具备边缘感知的 NLM 算法在⾼质量修复中的优越 性。 THANK",
+        "chunk_count": 1
+      }
+    ],
+    "segment_matches": [
+      {
+        "segment_id": "result-00000",
+        "start": 0.06,
+        "end": 0.98,
+        "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+        "page_index": 0,
+        "confidence": 0.6844,
+        "switched": true,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.7118,
+            "dense_score": 0.6073,
+            "lexical_score": 0.4749,
+            "max_score": 0.6073,
+            "mean_top_score": 0.6073,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 0,
+            "score": 0.6844,
+            "dense_score": 0.631,
+            "lexical_score": 0.2426,
+            "max_score": 0.631,
+            "mean_top_score": 0.631,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 4,
+            "score": 0.6361,
+            "dense_score": 0.5316,
+            "lexical_score": 0.4749,
+            "max_score": 0.5316,
+            "mean_top_score": 0.5316,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 11,
+            "score": 0.6,
+            "dense_score": 0.5466,
+            "lexical_score": 0.2426,
+            "max_score": 0.5466,
+            "mean_top_score": 0.5466,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5973,
+            "dense_score": 0.555,
+            "lexical_score": 0.1924,
+            "max_score": 0.555,
+            "mean_top_score": 0.555,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00001",
+        "start": 7.77,
+        "end": 8.27,
+        "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+        "page_index": 1,
+        "confidence": 0.6699,
+        "switched": true,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.6965,
+            "dense_score": 0.6371,
+            "lexical_score": 0.2702,
+            "max_score": 0.6371,
+            "mean_top_score": 0.6371,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.6768,
+            "dense_score": 0.6528,
+            "lexical_score": 0.1095,
+            "max_score": 0.6528,
+            "mean_top_score": 0.6528,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.6699,
+            "dense_score": 0.5864,
+            "lexical_score": 0.3797,
+            "max_score": 0.5864,
+            "mean_top_score": 0.5864,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 0,
+            "score": 0.6498,
+            "dense_score": 0.6194,
+            "lexical_score": 0.1381,
+            "max_score": 0.6194,
+            "mean_top_score": 0.6194,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5815,
+            "dense_score": 0.5574,
+            "lexical_score": 0.1095,
+            "max_score": 0.5574,
+            "mean_top_score": 0.5574,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00002",
+        "start": 15.06,
+        "end": 15.56,
+        "text": "可以看出照片的好看性或者是有更好的方法slide",
+        "page_index": 1,
+        "confidence": 0.6545,
+        "switched": false,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 6,
+            "score": 0.678,
+            "dense_score": 0.6539,
+            "lexical_score": 0.1095,
+            "max_score": 0.6539,
+            "mean_top_score": 0.6539,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.6664,
+            "dense_score": 0.6069,
+            "lexical_score": 0.2702,
+            "max_score": 0.6069,
+            "mean_top_score": 0.6069,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.6545,
+            "dense_score": 0.5709,
+            "lexical_score": 0.3797,
+            "max_score": 0.5709,
+            "mean_top_score": 0.5709,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.602,
+            "dense_score": 0.602,
+            "lexical_score": 0.0,
+            "max_score": 0.602,
+            "mean_top_score": 0.602,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.5886,
+            "dense_score": 0.5886,
+            "lexical_score": 0.0,
+            "max_score": 0.5886,
+            "mean_top_score": 0.5886,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00003",
+        "start": 19.34,
+        "end": 20.32,
+        "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+        "page_index": 1,
+        "confidence": 0.7328,
+        "switched": false,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 1,
+            "score": 0.7328,
+            "dense_score": 0.6304,
+            "lexical_score": 0.4656,
+            "max_score": 0.6304,
+            "mean_top_score": 0.6304,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.6796,
+            "dense_score": 0.6589,
+            "lexical_score": 0.0943,
+            "max_score": 0.6589,
+            "mean_top_score": 0.6589,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.6704,
+            "dense_score": 0.6192,
+            "lexical_score": 0.2328,
+            "max_score": 0.6192,
+            "mean_top_score": 0.6192,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.6273,
+            "dense_score": 0.6273,
+            "lexical_score": 0.0,
+            "max_score": 0.6273,
+            "mean_top_score": 0.6273,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.6058,
+            "dense_score": 0.6058,
+            "lexical_score": 0.0,
+            "max_score": 0.6058,
+            "mean_top_score": 0.6058,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00004",
+        "start": 60.18,
+        "end": 60.68,
+        "text": "lpfand",
+        "page_index": 2,
+        "confidence": 0.362,
+        "switched": true,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.362,
+            "dense_score": 0.362,
+            "lexical_score": 0.0,
+            "max_score": 0.362,
+            "mean_top_score": 0.362,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.3202,
+            "dense_score": 0.3202,
+            "lexical_score": 0.0,
+            "max_score": 0.3202,
+            "mean_top_score": 0.3202,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 4,
+            "score": 0.3056,
+            "dense_score": 0.3056,
+            "lexical_score": 0.0,
+            "max_score": 0.3056,
+            "mean_top_score": 0.3056,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.2721,
+            "dense_score": 0.2721,
+            "lexical_score": 0.0,
+            "max_score": 0.2721,
+            "mean_top_score": 0.2721,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.2425,
+            "dense_score": 0.2425,
+            "lexical_score": 0.0,
+            "max_score": 0.2425,
+            "mean_top_score": 0.2425,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00005",
+        "start": 61.4,
+        "end": 77.3,
+        "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+        "page_index": 2,
+        "confidence": 0.6552,
+        "switched": false,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.6552,
+            "dense_score": 0.4352,
+            "lexical_score": 1.0,
+            "max_score": 0.4352,
+            "mean_top_score": 0.4352,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.3899,
+            "dense_score": 0.3899,
+            "lexical_score": 0.0,
+            "max_score": 0.3899,
+            "mean_top_score": 0.3899,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.3693,
+            "dense_score": 0.3693,
+            "lexical_score": 0.0,
+            "max_score": 0.3693,
+            "mean_top_score": 0.3693,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 4,
+            "score": 0.3688,
+            "dense_score": 0.3688,
+            "lexical_score": 0.0,
+            "max_score": 0.3688,
+            "mean_top_score": 0.3688,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.3616,
+            "dense_score": 0.3616,
+            "lexical_score": 0.0,
+            "max_score": 0.3616,
+            "mean_top_score": 0.3616,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00006",
+        "start": 79.24,
+        "end": 82.64,
+        "text": "we still had some graininessand slight blurring to deal withslide",
+        "page_index": 2,
+        "confidence": 0.5956,
+        "switched": false,
+        "reason": "page_switch_confirmed",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.5956,
+            "dense_score": 0.3756,
+            "lexical_score": 1.0,
+            "max_score": 0.3756,
+            "mean_top_score": 0.3756,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.3735,
+            "dense_score": 0.3735,
+            "lexical_score": 0.0,
+            "max_score": 0.3735,
+            "mean_top_score": 0.3735,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.3697,
+            "dense_score": 0.3697,
+            "lexical_score": 0.0,
+            "max_score": 0.3697,
+            "mean_top_score": 0.3697,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.3613,
+            "dense_score": 0.3613,
+            "lexical_score": 0.0,
+            "max_score": 0.3613,
+            "mean_top_score": 0.3613,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.3601,
+            "dense_score": 0.3601,
+            "lexical_score": 0.0,
+            "max_score": 0.3601,
+            "mean_top_score": 0.3601,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00007",
+        "start": 83.54,
+        "end": 86.52,
+        "text": "4phase 2spatial filter baselinenext",
+        "page_index": 2,
+        "confidence": 0.716,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.716,
+            "dense_score": 0.496,
+            "lexical_score": 1.0,
+            "max_score": 0.496,
+            "mean_top_score": 0.496,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.4644,
+            "dense_score": 0.4644,
+            "lexical_score": 0.0,
+            "max_score": 0.4644,
+            "mean_top_score": 0.4644,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 3,
+            "score": 0.447,
+            "dense_score": 0.447,
+            "lexical_score": 0.0,
+            "max_score": 0.447,
+            "mean_top_score": 0.447,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 4,
+            "score": 0.4418,
+            "dense_score": 0.4418,
+            "lexical_score": 0.0,
+            "max_score": 0.4418,
+            "mean_top_score": 0.4418,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.4388,
+            "dense_score": 0.4388,
+            "lexical_score": 0.0,
+            "max_score": 0.4388,
+            "mean_top_score": 0.4388,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00008",
+        "start": 87.365,
+        "end": 87.865,
+        "text": "we",
+        "page_index": 2,
+        "confidence": 0.6855,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.6855,
+            "dense_score": 0.4655,
+            "lexical_score": 1.0,
+            "max_score": 0.4655,
+            "mean_top_score": 0.4655,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.446,
+            "dense_score": 0.446,
+            "lexical_score": 0.0,
+            "max_score": 0.446,
+            "mean_top_score": 0.446,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.4388,
+            "dense_score": 0.4388,
+            "lexical_score": 0.0,
+            "max_score": 0.4388,
+            "mean_top_score": 0.4388,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.4321,
+            "dense_score": 0.4321,
+            "lexical_score": 0.0,
+            "max_score": 0.4321,
+            "mean_top_score": 0.4321,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.4305,
+            "dense_score": 0.4305,
+            "lexical_score": 0.0,
+            "max_score": 0.4305,
+            "mean_top_score": 0.4305,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00009",
+        "start": 88.71,
+        "end": 89.21,
+        "text": "wondered",
+        "page_index": 2,
+        "confidence": 0.6246,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 2,
+            "score": 0.6246,
+            "dense_score": 0.4046,
+            "lexical_score": 1.0,
+            "max_score": 0.4046,
+            "mean_top_score": 0.4046,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.418,
+            "dense_score": 0.418,
+            "lexical_score": 0.0,
+            "max_score": 0.418,
+            "mean_top_score": 0.418,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.4072,
+            "dense_score": 0.4072,
+            "lexical_score": 0.0,
+            "max_score": 0.4072,
+            "mean_top_score": 0.4072,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 0,
+            "score": 0.4056,
+            "dense_score": 0.4056,
+            "lexical_score": 0.0,
+            "max_score": 0.4056,
+            "mean_top_score": 0.4056,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.4037,
+            "dense_score": 0.4037,
+            "lexical_score": 0.0,
+            "max_score": 0.4037,
+            "mean_top_score": 0.4037,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00010",
+        "start": 90.055,
+        "end": 90.555,
+        "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+        "page_index": 9,
+        "confidence": 0.6029,
+        "switched": true,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.6029,
+            "dense_score": 0.4929,
+            "lexical_score": 0.5,
+            "max_score": 0.4929,
+            "mean_top_score": 0.4929,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.5935,
+            "dense_score": 0.4835,
+            "lexical_score": 0.5,
+            "max_score": 0.4835,
+            "mean_top_score": 0.4835,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5003,
+            "dense_score": 0.5003,
+            "lexical_score": 0.0,
+            "max_score": 0.5003,
+            "mean_top_score": 0.5003,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.4977,
+            "dense_score": 0.4977,
+            "lexical_score": 0.0,
+            "max_score": 0.4977,
+            "mean_top_score": 0.4977,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.4783,
+            "dense_score": 0.4783,
+            "lexical_score": 0.0,
+            "max_score": 0.4783,
+            "mean_top_score": 0.4783,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00011",
+        "start": 91.4,
+        "end": 91.9,
+        "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+        "page_index": 9,
+        "confidence": 0.6737,
+        "switched": false,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.6737,
+            "dense_score": 0.5637,
+            "lexical_score": 0.5,
+            "max_score": 0.5637,
+            "mean_top_score": 0.5637,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.608,
+            "dense_score": 0.498,
+            "lexical_score": 0.5,
+            "max_score": 0.498,
+            "mean_top_score": 0.498,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5276,
+            "dense_score": 0.5276,
+            "lexical_score": 0.0,
+            "max_score": 0.5276,
+            "mean_top_score": 0.5276,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5214,
+            "dense_score": 0.5214,
+            "lexical_score": 0.0,
+            "max_score": 0.5214,
+            "mean_top_score": 0.5214,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.5132,
+            "dense_score": 0.5132,
+            "lexical_score": 0.0,
+            "max_score": 0.5132,
+            "mean_top_score": 0.5132,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00012",
+        "start": 98.29,
+        "end": 98.79,
+        "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+        "page_index": 9,
+        "confidence": 0.7038,
+        "switched": false,
+        "reason": "global_monotonic_smoothing",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.7038,
+            "dense_score": 0.5938,
+            "lexical_score": 0.5,
+            "max_score": 0.5938,
+            "mean_top_score": 0.5938,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.6058,
+            "dense_score": 0.4958,
+            "lexical_score": 0.5,
+            "max_score": 0.4958,
+            "mean_top_score": 0.4958,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.537,
+            "dense_score": 0.537,
+            "lexical_score": 0.0,
+            "max_score": 0.537,
+            "mean_top_score": 0.537,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5069,
+            "dense_score": 0.5069,
+            "lexical_score": 0.0,
+            "max_score": 0.5069,
+            "mean_top_score": 0.5069,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.5019,
+            "dense_score": 0.5019,
+            "lexical_score": 0.0,
+            "max_score": 0.5019,
+            "mean_top_score": 0.5019,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00013",
+        "start": 105.18,
+        "end": 105.68,
+        "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+        "page_index": 9,
+        "confidence": 0.706,
+        "switched": false,
+        "reason": "page_switch_confirmed",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.706,
+            "dense_score": 0.6326,
+            "lexical_score": 0.3333,
+            "max_score": 0.6326,
+            "mean_top_score": 0.6326,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5886,
+            "dense_score": 0.5153,
+            "lexical_score": 0.3333,
+            "max_score": 0.5153,
+            "mean_top_score": 0.5153,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.5714,
+            "dense_score": 0.4981,
+            "lexical_score": 0.3333,
+            "max_score": 0.4981,
+            "mean_top_score": 0.4981,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5516,
+            "dense_score": 0.5516,
+            "lexical_score": 0.0,
+            "max_score": 0.5516,
+            "mean_top_score": 0.5516,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.531,
+            "dense_score": 0.531,
+            "lexical_score": 0.0,
+            "max_score": 0.531,
+            "mean_top_score": 0.531,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00014",
+        "start": 120.84,
+        "end": 121.34,
+        "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+        "page_index": 9,
+        "confidence": 0.6992,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.6992,
+            "dense_score": 0.6382,
+            "lexical_score": 0.2774,
+            "max_score": 0.6382,
+            "mean_top_score": 0.6382,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.6206,
+            "dense_score": 0.569,
+            "lexical_score": 0.2348,
+            "max_score": 0.569,
+            "mean_top_score": 0.569,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.6193,
+            "dense_score": 0.5866,
+            "lexical_score": 0.1484,
+            "max_score": 0.5866,
+            "mean_top_score": 0.5866,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.6065,
+            "dense_score": 0.5488,
+            "lexical_score": 0.2625,
+            "max_score": 0.5488,
+            "mean_top_score": 0.5488,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5951,
+            "dense_score": 0.5709,
+            "lexical_score": 0.11,
+            "max_score": 0.5709,
+            "mean_top_score": 0.5709,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00015",
+        "start": 135.3,
+        "end": 135.8,
+        "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+        "page_index": 9,
+        "confidence": 0.6542,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.6542,
+            "dense_score": 0.6109,
+            "lexical_score": 0.1966,
+            "max_score": 0.6109,
+            "mean_top_score": 0.6109,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.6056,
+            "dense_score": 0.5481,
+            "lexical_score": 0.261,
+            "max_score": 0.5481,
+            "mean_top_score": 0.5481,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.6031,
+            "dense_score": 0.5668,
+            "lexical_score": 0.165,
+            "max_score": 0.5668,
+            "mean_top_score": 0.5668,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5837,
+            "dense_score": 0.5194,
+            "lexical_score": 0.2919,
+            "max_score": 0.5194,
+            "mean_top_score": 0.5194,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5795,
+            "dense_score": 0.5526,
+            "lexical_score": 0.1223,
+            "max_score": 0.5526,
+            "mean_top_score": 0.5526,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00016",
+        "start": 150.06,
+        "end": 151.34,
+        "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+        "page_index": 9,
+        "confidence": 0.5735,
+        "switched": false,
+        "reason": "awaiting_confirmation",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.6135,
+            "dense_score": 0.5666,
+            "lexical_score": 0.2133,
+            "max_score": 0.5666,
+            "mean_top_score": 0.5666,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.5826,
+            "dense_score": 0.5529,
+            "lexical_score": 0.1349,
+            "max_score": 0.5529,
+            "mean_top_score": 0.5529,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5819,
+            "dense_score": 0.5294,
+            "lexical_score": 0.2385,
+            "max_score": 0.5294,
+            "mean_top_score": 0.5294,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.5735,
+            "dense_score": 0.5382,
+            "lexical_score": 0.1607,
+            "max_score": 0.5382,
+            "mean_top_score": 0.5382,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5341,
+            "dense_score": 0.492,
+            "lexical_score": 0.1913,
+            "max_score": 0.492,
+            "mean_top_score": 0.492,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00017",
+        "start": 157.95,
+        "end": 158.45,
+        "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+        "page_index": 9,
+        "confidence": 0.6028,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.6123,
+            "dense_score": 0.5654,
+            "lexical_score": 0.2133,
+            "max_score": 0.5654,
+            "mean_top_score": 0.5654,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.6028,
+            "dense_score": 0.5674,
+            "lexical_score": 0.1607,
+            "max_score": 0.5674,
+            "mean_top_score": 0.5674,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.594,
+            "dense_score": 0.5416,
+            "lexical_score": 0.2385,
+            "max_score": 0.5416,
+            "mean_top_score": 0.5416,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.591,
+            "dense_score": 0.5614,
+            "lexical_score": 0.1349,
+            "max_score": 0.5614,
+            "mean_top_score": 0.5614,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5617,
+            "dense_score": 0.5196,
+            "lexical_score": 0.1913,
+            "max_score": 0.5196,
+            "mean_top_score": 0.5196,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00018",
+        "start": 165.06,
+        "end": 165.56,
+        "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+        "page_index": 9,
+        "confidence": 0.5788,
+        "switched": false,
+        "reason": "awaiting_confirmation",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.6379,
+            "dense_score": 0.5194,
+            "lexical_score": 0.5386,
+            "max_score": 0.5194,
+            "mean_top_score": 0.5194,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5861,
+            "dense_score": 0.5112,
+            "lexical_score": 0.3405,
+            "max_score": 0.5112,
+            "mean_top_score": 0.5112,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.5788,
+            "dense_score": 0.5788,
+            "lexical_score": 0.0,
+            "max_score": 0.5788,
+            "mean_top_score": 0.5788,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.5566,
+            "dense_score": 0.5324,
+            "lexical_score": 0.1099,
+            "max_score": 0.5324,
+            "mean_top_score": 0.5324,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 3,
+            "score": 0.5459,
+            "dense_score": 0.4781,
+            "lexical_score": 0.308,
+            "max_score": 0.4781,
+            "mean_top_score": 0.4781,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00019",
+        "start": 180.18,
+        "end": 180.68,
+        "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+        "page_index": 9,
+        "confidence": 0.5965,
+        "switched": false,
+        "reason": "awaiting_confirmation",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.6534,
+            "dense_score": 0.5349,
+            "lexical_score": 0.5386,
+            "max_score": 0.5349,
+            "mean_top_score": 0.5349,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.5965,
+            "dense_score": 0.5965,
+            "lexical_score": 0.0,
+            "max_score": 0.5965,
+            "mean_top_score": 0.5965,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.5816,
+            "dense_score": 0.5067,
+            "lexical_score": 0.3405,
+            "max_score": 0.5067,
+            "mean_top_score": 0.5067,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.5663,
+            "dense_score": 0.5421,
+            "lexical_score": 0.1099,
+            "max_score": 0.5421,
+            "mean_top_score": 0.5421,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 3,
+            "score": 0.5562,
+            "dense_score": 0.4885,
+            "lexical_score": 0.308,
+            "max_score": 0.4885,
+            "mean_top_score": 0.4885,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00020",
+        "start": 195.84,
+        "end": 196.34,
+        "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+        "page_index": 9,
+        "confidence": 0.5588,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 5,
+            "score": 0.5881,
+            "dense_score": 0.4751,
+            "lexical_score": 0.5138,
+            "max_score": 0.4751,
+            "mean_top_score": 0.4751,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 9,
+            "score": 0.5588,
+            "dense_score": 0.5588,
+            "lexical_score": 0.0,
+            "max_score": 0.5588,
+            "mean_top_score": 0.5588,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 8,
+            "score": 0.5036,
+            "dense_score": 0.3967,
+            "lexical_score": 0.4862,
+            "max_score": 0.3967,
+            "mean_top_score": 0.3967,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 3,
+            "score": 0.4995,
+            "dense_score": 0.4473,
+            "lexical_score": 0.2374,
+            "max_score": 0.4473,
+            "mean_top_score": 0.4473,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.4883,
+            "dense_score": 0.4883,
+            "lexical_score": 0.0,
+            "max_score": 0.4883,
+            "mean_top_score": 0.4883,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00021",
+        "start": 210.06,
+        "end": 210.56,
+        "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+        "page_index": 9,
+        "confidence": 0.5109,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.5109,
+            "dense_score": 0.5109,
+            "lexical_score": 0.0,
+            "max_score": 0.5109,
+            "mean_top_score": 0.5109,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.4899,
+            "dense_score": 0.4314,
+            "lexical_score": 0.2661,
+            "max_score": 0.4314,
+            "mean_top_score": 0.4314,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 8,
+            "score": 0.4676,
+            "dense_score": 0.3646,
+            "lexical_score": 0.4679,
+            "max_score": 0.3646,
+            "mean_top_score": 0.3646,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.4634,
+            "dense_score": 0.4049,
+            "lexical_score": 0.2661,
+            "max_score": 0.4049,
+            "mean_top_score": 0.4049,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 6,
+            "score": 0.4527,
+            "dense_score": 0.4527,
+            "lexical_score": 0.0,
+            "max_score": 0.4527,
+            "mean_top_score": 0.4527,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00022",
+        "start": 217.56,
+        "end": 218.06,
+        "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+        "page_index": 9,
+        "confidence": 0.5326,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.5326,
+            "dense_score": 0.5326,
+            "lexical_score": 0.0,
+            "max_score": 0.5326,
+            "mean_top_score": 0.5326,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5113,
+            "dense_score": 0.4528,
+            "lexical_score": 0.2661,
+            "max_score": 0.4528,
+            "mean_top_score": 0.4528,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 8,
+            "score": 0.4997,
+            "dense_score": 0.3968,
+            "lexical_score": 0.4679,
+            "max_score": 0.3968,
+            "mean_top_score": 0.3968,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.498,
+            "dense_score": 0.4395,
+            "lexical_score": 0.2661,
+            "max_score": 0.4395,
+            "mean_top_score": 0.4395,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.4852,
+            "dense_score": 0.4408,
+            "lexical_score": 0.2018,
+            "max_score": 0.4408,
+            "mean_top_score": 0.4408,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00023",
+        "start": 225.06,
+        "end": 225.56,
+        "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+        "page_index": 9,
+        "confidence": 0.5407,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.5407,
+            "dense_score": 0.5407,
+            "lexical_score": 0.0,
+            "max_score": 0.5407,
+            "mean_top_score": 0.5407,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5157,
+            "dense_score": 0.4572,
+            "lexical_score": 0.2661,
+            "max_score": 0.4572,
+            "mean_top_score": 0.4572,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 8,
+            "score": 0.5108,
+            "dense_score": 0.4079,
+            "lexical_score": 0.4679,
+            "max_score": 0.4079,
+            "mean_top_score": 0.4079,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 2,
+            "score": 0.5011,
+            "dense_score": 0.4426,
+            "lexical_score": 0.2661,
+            "max_score": 0.4426,
+            "mean_top_score": 0.4426,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5005,
+            "dense_score": 0.4561,
+            "lexical_score": 0.2018,
+            "max_score": 0.4561,
+            "mean_top_score": 0.4561,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00024",
+        "start": 232.36,
+        "end": 232.86,
+        "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+        "page_index": 9,
+        "confidence": 0.5622,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.5622,
+            "dense_score": 0.5622,
+            "lexical_score": 0.0,
+            "max_score": 0.5622,
+            "mean_top_score": 0.5622,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 5,
+            "score": 0.5385,
+            "dense_score": 0.48,
+            "lexical_score": 0.2661,
+            "max_score": 0.48,
+            "mean_top_score": 0.48,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 8,
+            "score": 0.5369,
+            "dense_score": 0.4339,
+            "lexical_score": 0.4679,
+            "max_score": 0.4339,
+            "mean_top_score": 0.4339,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5194,
+            "dense_score": 0.475,
+            "lexical_score": 0.2018,
+            "max_score": 0.475,
+            "mean_top_score": 0.475,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.5189,
+            "dense_score": 0.5189,
+            "lexical_score": 0.0,
+            "max_score": 0.5189,
+            "mean_top_score": 0.5189,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00025",
+        "start": 255.06,
+        "end": 255.56,
+        "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+        "page_index": 9,
+        "confidence": 0.8417,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.8417,
+            "dense_score": 0.6217,
+            "lexical_score": 1.0,
+            "max_score": 0.6217,
+            "mean_top_score": 0.6217,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.7441,
+            "dense_score": 0.5241,
+            "lexical_score": 1.0,
+            "max_score": 0.5241,
+            "mean_top_score": 0.5241,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.7423,
+            "dense_score": 0.5223,
+            "lexical_score": 1.0,
+            "max_score": 0.5223,
+            "mean_top_score": 0.5223,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 11,
+            "score": 0.6912,
+            "dense_score": 0.4712,
+            "lexical_score": 1.0,
+            "max_score": 0.4712,
+            "mean_top_score": 0.4712,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.5743,
+            "dense_score": 0.5743,
+            "lexical_score": 0.0,
+            "max_score": 0.5743,
+            "mean_top_score": 0.5743,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00026",
+        "start": 270.06,
+        "end": 270.56,
+        "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+        "page_index": 9,
+        "confidence": 0.8188,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.8188,
+            "dense_score": 0.5988,
+            "lexical_score": 1.0,
+            "max_score": 0.5988,
+            "mean_top_score": 0.5988,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.7059,
+            "dense_score": 0.4859,
+            "lexical_score": 1.0,
+            "max_score": 0.4859,
+            "mean_top_score": 0.4859,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.6616,
+            "dense_score": 0.4416,
+            "lexical_score": 1.0,
+            "max_score": 0.4416,
+            "mean_top_score": 0.4416,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 11,
+            "score": 0.6351,
+            "dense_score": 0.4151,
+            "lexical_score": 1.0,
+            "max_score": 0.4151,
+            "mean_top_score": 0.4151,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.5168,
+            "dense_score": 0.5168,
+            "lexical_score": 0.0,
+            "max_score": 0.5168,
+            "mean_top_score": 0.5168,
+            "chunk_hits": 1
+          }
+        ]
+      },
+      {
+        "segment_id": "result-00027",
+        "start": 286.4,
+        "end": 286.9,
+        "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+        "page_index": 9,
+        "confidence": 0.7207,
+        "switched": false,
+        "reason": "stay_current_page",
+        "page_scores": [
+          {
+            "page_index": 9,
+            "score": 0.7207,
+            "dense_score": 0.5007,
+            "lexical_score": 1.0,
+            "max_score": 0.5007,
+            "mean_top_score": 0.5007,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 1,
+            "score": 0.6428,
+            "dense_score": 0.4228,
+            "lexical_score": 1.0,
+            "max_score": 0.4228,
+            "mean_top_score": 0.4228,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 10,
+            "score": 0.5563,
+            "dense_score": 0.3363,
+            "lexical_score": 1.0,
+            "max_score": 0.3363,
+            "mean_top_score": 0.3363,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 11,
+            "score": 0.528,
+            "dense_score": 0.308,
+            "lexical_score": 1.0,
+            "max_score": 0.308,
+            "mean_top_score": 0.308,
+            "chunk_hits": 1
+          },
+          {
+            "page_index": 7,
+            "score": 0.3948,
+            "dense_score": 0.3948,
+            "lexical_score": 0.0,
+            "max_score": 0.3948,
+            "mean_top_score": 0.3948,
+            "chunk_hits": 1
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "page_index": 0,
+        "start_time": 0.06,
+        "end_time": 0.98,
+        "duration": 0.92,
+        "confidence": 0.6844
+      },
+      {
+        "page_index": 1,
+        "start_time": 7.77,
+        "end_time": 20.32,
+        "duration": 12.55,
+        "confidence": 0.7328
+      },
+      {
+        "page_index": 2,
+        "start_time": 60.18,
+        "end_time": 89.21,
+        "duration": 29.03,
+        "confidence": 0.716
+      },
+      {
+        "page_index": 9,
+        "start_time": 90.055,
+        "end_time": 286.9,
+        "duration": 196.845,
+        "confidence": 0.8417
+      }
+    ],
+    "runtime": {
+      "embedding_backend": "api",
+      "embedding_model": "BAAI/bge-large-zh-v1.5",
+      "pdf_path": "/Users/xingyujie/Desktop/code/lite_synphonia/test_source/test.pdf",
+      "page_count": 12,
+      "chunk_count": 12,
+      "segment_count": 28,
+      "unique_query_segments": 28,
+      "pdf_cache_hit": false,
+      "passage_prefix": "",
+      "query_prefix": "",
+      "query_max_seconds": 40.0,
+      "query_max_segments": 12,
+      "switch_margin": 0.035,
+      "low_confidence_threshold": 0.15,
+      "min_page_dwell_seconds": 6.0,
+      "cooldown_seconds": 8.0,
+      "confirmations_required": 3
+    },
+    "warnings": {
+      "empty_pages": [],
+      "extraction_failures": [],
+      "low_confidence_segments": 0,
+      "timeline_quality": {
+        "collapsed_timeline": false,
+        "distinct_raw_top_pages": 5,
+        "distinct_assigned_pages": 4,
+        "dominant_page_ratio": 0.8224
+      }
+    },
+    "stage_status": {
+      "stage": "pdf_matching",
+      "status": "success",
+      "reason": "PDF matching completed.",
+      "upstream_dependency": "transcription",
+      "details": {
+        "embedding_provider": "siliconflow-embed"
+      }
+    }
+  }
+}

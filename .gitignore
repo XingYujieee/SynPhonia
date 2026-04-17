@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-ts/
+.DS_Store
+lite_synphonia_output/
+*.log
+__pycache__/

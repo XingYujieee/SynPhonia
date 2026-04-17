@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-meeting-001",
+  "start_time": "2026-04-02T14:00:00",
+  "end_time": "2026-04-02T15:00:00",
+  "summary_text": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。",
+  "keywords": [
+    "采购预算",
+    "成本控制",
+    "供应商筛选"
+  ],
+  "transcript_artifact_path": ".tmp_test_runs/kb_demo/records/activity-meeting-001/transcript.txt",
+  "summary_artifact_path": ".tmp_test_runs/kb_demo/records/activity-meeting-001/summary.txt",
+  "ppt_present": false,
+  "ppt_file_path": null,
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "meeting"
+}

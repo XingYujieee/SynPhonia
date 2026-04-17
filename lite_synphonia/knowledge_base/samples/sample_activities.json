@@ -1,0 +1,79 @@
+[
+  {
+    "activity_id": "activity-classroom-001",
+    "start_time": "2026-04-01T09:00:00",
+    "end_time": "2026-04-01T10:15:00",
+    "transcript_text": "老师首先说明为什么课堂辅助系统必须关注延迟预算，然后解释增量读取、窗口大小和重叠区间会怎样影响实时总结的稳定性。接着老师要求同学记录窗口大小与 overlap 的作用差异。",
+    "summary_text": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+    "keywords": [
+      "延迟预算",
+      "增量读取",
+      "窗口大小"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week01.pptx",
+    "scene_type": "classroom"
+  },
+  {
+    "activity_id": "activity-classroom-002",
+    "start_time": "2026-04-03T09:00:00",
+    "end_time": "2026-04-03T10:05:00",
+    "transcript_text": "本次活动继续讨论实时总结系统，重点解释 overlap 如何帮助上下文连续，并再次比较窗口大小设置对生成质量和耗时的影响。老师还演示了如何在固定延迟预算下调整参数。",
+    "summary_text": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+    "keywords": [
+      "窗口大小",
+      "overlap",
+      "延迟预算"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week01.pptx",
+    "scene_type": "classroom"
+  },
+  {
+    "activity_id": "activity-classroom-003",
+    "start_time": "2026-04-10T09:00:00",
+    "end_time": "2026-04-10T09:50:00",
+    "transcript_text": "老师先发布课程通知，说明答疑安排和更新后的课件位置，然后简短回顾上一轮关于总结质量与窗口大小的讨论，提醒大家复习延迟预算相关内容。",
+    "summary_text": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+    "keywords": [
+      "课程通知",
+      "窗口大小",
+      "总结质量"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week02.pptx",
+    "scene_type": "classroom",
+    "ppt_text_excerpt": "包含课程通知页、答疑时间页和参数回顾页。"
+  },
+  {
+    "activity_id": "activity-meeting-001",
+    "start_time": "2026-04-02T14:00:00",
+    "end_time": "2026-04-02T15:00:00",
+    "transcript_text": "会议围绕采购预算、成本控制和供应商筛选展开，参会者讨论了线下会议材料整理方式，并确认需要在下周给出预算版本更新。",
+    "summary_text": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。",
+    "keywords": [
+      "采购预算",
+      "成本控制",
+      "供应商筛选"
+    ],
+    "ppt_present": false,
+    "scene_type": "meeting"
+  },
+  {
+    "activity_id": "activity-meeting-002",
+    "start_time": "2026-04-09T14:00:00",
+    "end_time": "2026-04-09T15:10:00",
+    "transcript_text": "这次会议延续上周的采购预算讨论，团队比较了不同供应商计划，并继续分析成本控制目标是否需要调整，同时确认了预算评审文件的整理方式。",
+    "summary_text": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+    "keywords": [
+      "采购预算",
+      "供应商计划",
+      "成本控制"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/meeting_budget_review.pptx",
+    "scene_type": "meeting",
+    "ppt_text_excerpt": "预算对比页、供应商计划页、评审时间页。"
+  }
+]
+

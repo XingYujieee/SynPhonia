@@ -1,0 +1,74 @@
+{
+  "attempts": [
+    {
+      "attempt": "enhanced_audio",
+      "model": "whisper-large",
+      "language": "zh-CN",
+      "request_url": "https://api.deepgram.com/v1/listen?punctuate=true&smart_format=true&utterances=true&utt_split=1.2&numerals=true&filler_words=false&model=whisper-large&language=zh-CN",
+      "response": {
+        "metadata": {
+          "transaction_key": "deprecated",
+          "request_id": "019d8fe9-94e3-7dd1-8e67-6d500be60799",
+          "sha256": "290cfcd183ec6686e1ce658bb240b6342b77035e286663bb7854589c6fab4021",
+          "created": "2026-04-15T06:52:23.160Z",
+          "duration": 3.0,
+          "channels": 1,
+          "models": [
+            "2a000f0d-afa1-4f20-8481-94f8bc30b0b2"
+          ],
+          "model_info": {
+            "2a000f0d-afa1-4f20-8481-94f8bc30b0b2": {
+              "name": "large-whisper",
+              "version": "2022-12-08.0",
+              "arch": "whisper"
+            }
+          }
+        },
+        "results": {
+          "channels": [
+            {
+              "alternatives": []
+            }
+          ],
+          "utterances": []
+        }
+      },
+      "segment_count": 0
+    },
+    {
+      "attempt": "enhanced_audio_auto_language",
+      "model": "whisper-large",
+      "language": "auto",
+      "request_url": "https://api.deepgram.com/v1/listen?punctuate=true&smart_format=true&utterances=true&utt_split=1.2&numerals=true&filler_words=false&model=whisper-large",
+      "response": {
+        "metadata": {
+          "transaction_key": "deprecated",
+          "request_id": "019d8fe9-a63a-7452-a3b2-d96947aea29e",
+          "sha256": "290cfcd183ec6686e1ce658bb240b6342b77035e286663bb7854589c6fab4021",
+          "created": "2026-04-15T06:52:27.582Z",
+          "duration": 3.0,
+          "channels": 1,
+          "models": [
+            "2a000f0d-afa1-4f20-8481-94f8bc30b0b2"
+          ],
+          "model_info": {
+            "2a000f0d-afa1-4f20-8481-94f8bc30b0b2": {
+              "name": "large-whisper",
+              "version": "2022-12-08.0",
+              "arch": "whisper"
+            }
+          }
+        },
+        "results": {
+          "channels": [
+            {
+              "alternatives": []
+            }
+          ],
+          "utterances": []
+        }
+      },
+      "segment_count": 0
+    }
+  ]
+}

@@ -1,0 +1,833 @@
+{
+  "navigation": [
+    "历史记录",
+    "关联地图",
+    "记录时间线",
+    "文件查找"
+  ],
+  "history": {
+    "navigation": [
+      "历史记录",
+      "关联地图",
+      "记录时间线",
+      "文件查找"
+    ],
+    "statistics_cards": [
+      {
+        "label": "全部记录",
+        "count": 5,
+        "target_view": "full_record_list"
+      },
+      {
+        "label": "内容主线",
+        "count": 3,
+        "target_view": "content_lines"
+      },
+      {
+        "label": "带附件的记录",
+        "count": 4,
+        "target_view": "attachment_records"
+      },
+      {
+        "label": "待确认关联",
+        "count": 2,
+        "target_view": "pending_relations"
+      }
+    ],
+    "full_record_list": [
+      {
+        "activity_id": "activity-classroom-001",
+        "title": "延迟预算",
+        "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+        "keywords": [
+          "延迟预算",
+          "增量读取",
+          "窗口大小"
+        ],
+        "start_time": "2026-04-01T09:00:00",
+        "end_time": "2026-04-01T10:15:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      },
+      {
+        "activity_id": "activity-meeting-001",
+        "title": "采购预算",
+        "summary": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。",
+        "keywords": [
+          "采购预算",
+          "成本控制",
+          "供应商筛选"
+        ],
+        "start_time": "2026-04-02T14:00:00",
+        "end_time": "2026-04-02T15:00:00",
+        "has_ppt_attachment": false,
+        "scene_type": "meeting"
+      },
+      {
+        "activity_id": "activity-classroom-002",
+        "title": "窗口大小",
+        "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+        "keywords": [
+          "窗口大小",
+          "overlap",
+          "延迟预算"
+        ],
+        "start_time": "2026-04-03T09:00:00",
+        "end_time": "2026-04-03T10:05:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      },
+      {
+        "activity_id": "activity-meeting-002",
+        "title": "采购预算",
+        "summary": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+        "keywords": [
+          "采购预算",
+          "供应商计划",
+          "成本控制"
+        ],
+        "start_time": "2026-04-09T14:00:00",
+        "end_time": "2026-04-09T15:10:00",
+        "has_ppt_attachment": true,
+        "scene_type": "meeting"
+      },
+      {
+        "activity_id": "activity-classroom-003",
+        "title": "课程通知",
+        "summary": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+        "keywords": [
+          "课程通知",
+          "窗口大小",
+          "总结质量"
+        ],
+        "start_time": "2026-04-10T09:00:00",
+        "end_time": "2026-04-10T09:50:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      }
+    ],
+    "content_lines": [
+      {
+        "content_line_id": "line-001",
+        "title": "延迟预算",
+        "activity_count": 2,
+        "activities": [
+          {
+            "activity_id": "activity-classroom-001",
+            "title": "延迟预算",
+            "date": "2026-04-01",
+            "start_time": "2026-04-01T09:00:00",
+            "end_time": "2026-04-01T10:15:00",
+            "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+            "keywords": [
+              "延迟预算",
+              "增量读取",
+              "窗口大小"
+            ]
+          },
+          {
+            "activity_id": "activity-classroom-002",
+            "title": "窗口大小",
+            "date": "2026-04-03",
+            "start_time": "2026-04-03T09:00:00",
+            "end_time": "2026-04-03T10:05:00",
+            "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+            "keywords": [
+              "窗口大小",
+              "overlap",
+              "延迟预算"
+            ]
+          }
+        ]
+      },
+      {
+        "content_line_id": "line-002",
+        "title": "采购预算",
+        "activity_count": 2,
+        "activities": [
+          {
+            "activity_id": "activity-meeting-001",
+            "title": "采购预算",
+            "date": "2026-04-02",
+            "start_time": "2026-04-02T14:00:00",
+            "end_time": "2026-04-02T15:00:00",
+            "summary": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。",
+            "keywords": [
+              "采购预算",
+              "成本控制",
+              "供应商筛选"
+            ]
+          },
+          {
+            "activity_id": "activity-meeting-002",
+            "title": "采购预算",
+            "date": "2026-04-09",
+            "start_time": "2026-04-09T14:00:00",
+            "end_time": "2026-04-09T15:10:00",
+            "summary": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+            "keywords": [
+              "采购预算",
+              "供应商计划",
+              "成本控制"
+            ]
+          }
+        ]
+      },
+      {
+        "content_line_id": "line-003",
+        "title": "课程通知",
+        "activity_count": 1,
+        "activities": [
+          {
+            "activity_id": "activity-classroom-003",
+            "title": "课程通知",
+            "date": "2026-04-10",
+            "start_time": "2026-04-10T09:00:00",
+            "end_time": "2026-04-10T09:50:00",
+            "summary": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+            "keywords": [
+              "课程通知",
+              "窗口大小",
+              "总结质量"
+            ]
+          }
+        ]
+      }
+    ],
+    "attachment_records": [
+      {
+        "activity_id": "activity-classroom-001",
+        "title": "延迟预算",
+        "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+        "keywords": [
+          "延迟预算",
+          "增量读取",
+          "窗口大小"
+        ],
+        "start_time": "2026-04-01T09:00:00",
+        "end_time": "2026-04-01T10:15:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      },
+      {
+        "activity_id": "activity-classroom-002",
+        "title": "窗口大小",
+        "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+        "keywords": [
+          "窗口大小",
+          "overlap",
+          "延迟预算"
+        ],
+        "start_time": "2026-04-03T09:00:00",
+        "end_time": "2026-04-03T10:05:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      },
+      {
+        "activity_id": "activity-meeting-002",
+        "title": "采购预算",
+        "summary": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+        "keywords": [
+          "采购预算",
+          "供应商计划",
+          "成本控制"
+        ],
+        "start_time": "2026-04-09T14:00:00",
+        "end_time": "2026-04-09T15:10:00",
+        "has_ppt_attachment": true,
+        "scene_type": "meeting"
+      },
+      {
+        "activity_id": "activity-classroom-003",
+        "title": "课程通知",
+        "summary": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+        "keywords": [
+          "课程通知",
+          "窗口大小",
+          "总结质量"
+        ],
+        "start_time": "2026-04-10T09:00:00",
+        "end_time": "2026-04-10T09:50:00",
+        "has_ppt_attachment": true,
+        "scene_type": "classroom"
+      }
+    ],
+    "pending_relations": [
+      {
+        "relation_id": "activity-classroom-001__activity-classroom-003",
+        "source_activity_id": "activity-classroom-001",
+        "target_activity_id": "activity-classroom-003",
+        "strength": "medium",
+        "state": "pending",
+        "reasons": [
+          "Detected 1 overlapping keyword.",
+          "Detected 9 overlapping summary/text terms.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      },
+      {
+        "relation_id": "activity-classroom-002__activity-classroom-003",
+        "source_activity_id": "activity-classroom-002",
+        "target_activity_id": "activity-classroom-003",
+        "strength": "medium",
+        "state": "pending",
+        "reasons": [
+          "Detected 1 overlapping keyword.",
+          "Detected 12 overlapping summary/text terms.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      }
+    ]
+  },
+  "relation_map": {
+    "nodes": [
+      {
+        "node_id": "activity-classroom-001",
+        "node_type": "activity",
+        "title": "延迟预算",
+        "scene_type": "classroom",
+        "start_time": "2026-04-01T09:00:00",
+        "keywords": [
+          "延迟预算",
+          "增量读取",
+          "窗口大小"
+        ],
+        "has_ppt": true
+      },
+      {
+        "node_id": "activity-meeting-001",
+        "node_type": "activity",
+        "title": "采购预算",
+        "scene_type": "meeting",
+        "start_time": "2026-04-02T14:00:00",
+        "keywords": [
+          "采购预算",
+          "成本控制",
+          "供应商筛选"
+        ],
+        "has_ppt": false
+      },
+      {
+        "node_id": "activity-classroom-002",
+        "node_type": "activity",
+        "title": "窗口大小",
+        "scene_type": "classroom",
+        "start_time": "2026-04-03T09:00:00",
+        "keywords": [
+          "窗口大小",
+          "overlap",
+          "延迟预算"
+        ],
+        "has_ppt": true
+      },
+      {
+        "node_id": "activity-meeting-002",
+        "node_type": "activity",
+        "title": "采购预算",
+        "scene_type": "meeting",
+        "start_time": "2026-04-09T14:00:00",
+        "keywords": [
+          "采购预算",
+          "供应商计划",
+          "成本控制"
+        ],
+        "has_ppt": true
+      },
+      {
+        "node_id": "activity-classroom-003",
+        "node_type": "activity",
+        "title": "课程通知",
+        "scene_type": "classroom",
+        "start_time": "2026-04-10T09:00:00",
+        "keywords": [
+          "课程通知",
+          "窗口大小",
+          "总结质量"
+        ],
+        "has_ppt": true
+      }
+    ],
+    "edges": [
+      {
+        "relation_id": "activity-classroom-001__activity-classroom-002",
+        "source_activity_id": "activity-classroom-001",
+        "target_activity_id": "activity-classroom-002",
+        "strength": "strong",
+        "state": "linked",
+        "reasons": [
+          "Detected 2 overlapping keywords.",
+          "Detected 9 overlapping summary/text terms.",
+          "Both activities reference the same local PPT path.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      },
+      {
+        "relation_id": "activity-meeting-001__activity-meeting-002",
+        "source_activity_id": "activity-meeting-001",
+        "target_activity_id": "activity-meeting-002",
+        "strength": "strong",
+        "state": "linked",
+        "reasons": [
+          "Detected 2 overlapping keywords.",
+          "Detected 12 overlapping summary/text terms.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      },
+      {
+        "relation_id": "activity-classroom-001__activity-classroom-003",
+        "source_activity_id": "activity-classroom-001",
+        "target_activity_id": "activity-classroom-003",
+        "strength": "medium",
+        "state": "pending",
+        "reasons": [
+          "Detected 1 overlapping keyword.",
+          "Detected 9 overlapping summary/text terms.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      },
+      {
+        "relation_id": "activity-classroom-002__activity-classroom-003",
+        "source_activity_id": "activity-classroom-002",
+        "target_activity_id": "activity-classroom-003",
+        "strength": "medium",
+        "state": "pending",
+        "reasons": [
+          "Detected 1 overlapping keyword.",
+          "Detected 12 overlapping summary/text terms.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      }
+    ]
+  },
+  "timeline_calendar": {
+    "mode": "chronological_calendar",
+    "dates": [
+      {
+        "date": "2026-04-01",
+        "entries": [
+          {
+            "activity_id": "activity-classroom-001",
+            "title": "延迟预算",
+            "start_time": "09:00",
+            "end_time": "10:15",
+            "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。"
+          }
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "entries": [
+          {
+            "activity_id": "activity-meeting-001",
+            "title": "采购预算",
+            "start_time": "14:00",
+            "end_time": "15:00",
+            "summary": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。"
+          }
+        ]
+      },
+      {
+        "date": "2026-04-03",
+        "entries": [
+          {
+            "activity_id": "activity-classroom-002",
+            "title": "窗口大小",
+            "start_time": "09:00",
+            "end_time": "10:05",
+            "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。"
+          }
+        ]
+      },
+      {
+        "date": "2026-04-09",
+        "entries": [
+          {
+            "activity_id": "activity-meeting-002",
+            "title": "采购预算",
+            "start_time": "14:00",
+            "end_time": "15:10",
+            "summary": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。"
+          }
+        ]
+      },
+      {
+        "date": "2026-04-10",
+        "entries": [
+          {
+            "activity_id": "activity-classroom-003",
+            "title": "课程通知",
+            "start_time": "09:00",
+            "end_time": "09:50",
+            "summary": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline_line_view": {
+    "mode": "content_line_timeline",
+    "content_lines": [
+      {
+        "content_line_id": "line-001",
+        "title": "延迟预算",
+        "activity_count": 2,
+        "activities": [
+          {
+            "activity_id": "activity-classroom-001",
+            "title": "延迟预算",
+            "date": "2026-04-01",
+            "start_time": "2026-04-01T09:00:00",
+            "end_time": "2026-04-01T10:15:00",
+            "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+            "keywords": [
+              "延迟预算",
+              "增量读取",
+              "窗口大小"
+            ]
+          },
+          {
+            "activity_id": "activity-classroom-002",
+            "title": "窗口大小",
+            "date": "2026-04-03",
+            "start_time": "2026-04-03T09:00:00",
+            "end_time": "2026-04-03T10:05:00",
+            "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+            "keywords": [
+              "窗口大小",
+              "overlap",
+              "延迟预算"
+            ]
+          }
+        ]
+      },
+      {
+        "content_line_id": "line-002",
+        "title": "采购预算",
+        "activity_count": 2,
+        "activities": [
+          {
+            "activity_id": "activity-meeting-001",
+            "title": "采购预算",
+            "date": "2026-04-02",
+            "start_time": "2026-04-02T14:00:00",
+            "end_time": "2026-04-02T15:00:00",
+            "summary": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。",
+            "keywords": [
+              "采购预算",
+              "成本控制",
+              "供应商筛选"
+            ]
+          },
+          {
+            "activity_id": "activity-meeting-002",
+            "title": "采购预算",
+            "date": "2026-04-09",
+            "start_time": "2026-04-09T14:00:00",
+            "end_time": "2026-04-09T15:10:00",
+            "summary": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。",
+            "keywords": [
+              "采购预算",
+              "供应商计划",
+              "成本控制"
+            ]
+          }
+        ]
+      },
+      {
+        "content_line_id": "line-003",
+        "title": "课程通知",
+        "activity_count": 1,
+        "activities": [
+          {
+            "activity_id": "activity-classroom-003",
+            "title": "课程通知",
+            "date": "2026-04-10",
+            "start_time": "2026-04-10T09:00:00",
+            "end_time": "2026-04-10T09:50:00",
+            "summary": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。",
+            "keywords": [
+              "课程通知",
+              "窗口大小",
+              "总结质量"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "file_lookup": {
+    "activity_groups": [
+      {
+        "activity_id": "activity-classroom-001",
+        "title": "延迟预算",
+        "files": [
+          {
+            "file_type": "transcript_text",
+            "label": "转录文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-001/transcript.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "老师首先说明为什么课堂辅助系统必须关注延迟预算，然后解释增量读取、窗口大小和重叠区间会怎样影响实时总结的稳定性。接着老师要求同学记录窗口大小与 overlap 的作用差异。"
+          },
+          {
+            "file_type": "summary_text",
+            "label": "总结文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-001/summary.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。"
+          },
+          {
+            "file_type": "ppt",
+            "label": "PPT",
+            "path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week01.pptx",
+            "exists": true,
+            "preview_mode": "external_only",
+            "preview_text": null,
+            "ppt_id": null
+          }
+        ]
+      },
+      {
+        "activity_id": "activity-meeting-001",
+        "title": "采购预算",
+        "files": [
+          {
+            "file_type": "transcript_text",
+            "label": "转录文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-meeting-001/transcript.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "会议围绕采购预算、成本控制和供应商筛选展开，参会者讨论了线下会议材料整理方式，并确认需要在下周给出预算版本更新。"
+          },
+          {
+            "file_type": "summary_text",
+            "label": "总结文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-meeting-001/summary.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动是一次离线会议，重点讨论采购预算、成本控制和供应商筛选，目标是整理预算版本并推进后续评估。"
+          },
+          {
+            "file_type": "ppt",
+            "label": "PPT",
+            "path": "",
+            "exists": false,
+            "preview_mode": "external_only",
+            "preview_text": null,
+            "ppt_id": null
+          }
+        ]
+      },
+      {
+        "activity_id": "activity-classroom-002",
+        "title": "窗口大小",
+        "files": [
+          {
+            "file_type": "transcript_text",
+            "label": "转录文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/transcript.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动继续讨论实时总结系统，重点解释 overlap 如何帮助上下文连续，并再次比较窗口大小设置对生成质量和耗时的影响。老师还演示了如何在固定延迟预算下调整参数。"
+          },
+          {
+            "file_type": "summary_text",
+            "label": "总结文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/summary.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。"
+          },
+          {
+            "file_type": "ppt",
+            "label": "PPT",
+            "path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week01.pptx",
+            "exists": true,
+            "preview_mode": "external_only",
+            "preview_text": null,
+            "ppt_id": null
+          }
+        ]
+      },
+      {
+        "activity_id": "activity-meeting-002",
+        "title": "采购预算",
+        "files": [
+          {
+            "file_type": "transcript_text",
+            "label": "转录文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-meeting-002/transcript.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "这次会议延续上周的采购预算讨论，团队比较了不同供应商计划，并继续分析成本控制目标是否需要调整，同时确认了预算评审文件的整理方式。"
+          },
+          {
+            "file_type": "summary_text",
+            "label": "总结文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-meeting-002/summary.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动继续沿着采购预算主线推进，讨论供应商计划、成本控制和预算评审文件，属于上一次会议的后续活动。"
+          },
+          {
+            "file_type": "ppt",
+            "label": "PPT",
+            "path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/meeting_budget_review.pptx",
+            "exists": true,
+            "preview_mode": "external_only",
+            "preview_text": "预算对比页、供应商计划页、评审时间页。",
+            "ppt_id": null
+          }
+        ]
+      },
+      {
+        "activity_id": "activity-classroom-003",
+        "title": "课程通知",
+        "files": [
+          {
+            "file_type": "transcript_text",
+            "label": "转录文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-003/transcript.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "老师先发布课程通知，说明答疑安排和更新后的课件位置，然后简短回顾上一轮关于总结质量与窗口大小的讨论，提醒大家复习延迟预算相关内容。"
+          },
+          {
+            "file_type": "summary_text",
+            "label": "总结文本",
+            "path": ".tmp_test_runs/kb_demo/records/activity-classroom-003/summary.txt",
+            "exists": true,
+            "preview_mode": "inline_text",
+            "preview_text": "本次活动以课程通知为主，同时轻度回顾了总结质量、窗口大小和延迟预算这些前几次活动中提到的技术要点。"
+          },
+          {
+            "file_type": "ppt",
+            "label": "PPT",
+            "path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week02.pptx",
+            "exists": true,
+            "preview_mode": "external_only",
+            "preview_text": "包含课程通知页、答疑时间页和参数回顾页。",
+            "ppt_id": null
+          }
+        ]
+      }
+    ]
+  },
+  "detail_panel": {
+    "activity_id": "activity-classroom-002",
+    "title": "窗口大小",
+    "scene_type": "classroom",
+    "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+    "keywords": [
+      "窗口大小",
+      "overlap",
+      "延迟预算"
+    ],
+    "start_time": "2026-04-03T09:00:00",
+    "end_time": "2026-04-03T10:05:00",
+    "duration_minutes": 65,
+    "transcript_preview": "本次活动继续讨论实时总结系统，重点解释 overlap 如何帮助上下文连续，并再次比较窗口大小设置对生成质量和耗时的影响。老师还演示了如何在固定延迟预算下调整参数。",
+    "relations": [
+      {
+        "relation_id": "activity-classroom-001__activity-classroom-002",
+        "source_activity_id": "activity-classroom-001",
+        "target_activity_id": "activity-classroom-002",
+        "strength": "strong",
+        "state": "linked",
+        "reasons": [
+          "Detected 2 overlapping keywords.",
+          "Detected 9 overlapping summary/text terms.",
+          "Both activities reference the same local PPT path.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      },
+      {
+        "relation_id": "activity-classroom-002__activity-classroom-003",
+        "source_activity_id": "activity-classroom-002",
+        "target_activity_id": "activity-classroom-003",
+        "strength": "medium",
+        "state": "pending",
+        "reasons": [
+          "Detected 1 overlapping keyword.",
+          "Detected 12 overlapping summary/text terms.",
+          "Activities occurred within 7 days.",
+          "Activities share the same scene type."
+        ],
+        "source_type": "rule"
+      }
+    ],
+    "timeline_context": {
+      "content_line_id": "line-001",
+      "title": "延迟预算",
+      "activity_count": 2,
+      "activities": [
+        {
+          "activity_id": "activity-classroom-001",
+          "title": "延迟预算",
+          "date": "2026-04-01",
+          "start_time": "2026-04-01T09:00:00",
+          "end_time": "2026-04-01T10:15:00",
+          "summary": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+          "keywords": [
+            "延迟预算",
+            "增量读取",
+            "窗口大小"
+          ]
+        },
+        {
+          "activity_id": "activity-classroom-002",
+          "title": "窗口大小",
+          "date": "2026-04-03",
+          "start_time": "2026-04-03T09:00:00",
+          "end_time": "2026-04-03T10:05:00",
+          "summary": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。",
+          "keywords": [
+            "窗口大小",
+            "overlap",
+            "延迟预算"
+          ]
+        }
+      ]
+    },
+    "files": [
+      {
+        "file_type": "transcript_text",
+        "label": "转录文本",
+        "path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/transcript.txt",
+        "exists": true,
+        "preview_mode": "inline_text",
+        "preview_text": "本次活动继续讨论实时总结系统，重点解释 overlap 如何帮助上下文连续，并再次比较窗口大小设置对生成质量和耗时的影响。老师还演示了如何在固定延迟预算下调整参数。"
+      },
+      {
+        "file_type": "summary_text",
+        "label": "总结文本",
+        "path": ".tmp_test_runs/kb_demo/records/activity-classroom-002/summary.txt",
+        "exists": true,
+        "preview_mode": "inline_text",
+        "preview_text": "本次活动继续沿着实时总结主线展开，重点是 overlap、窗口大小与延迟预算之间的关系，以及参数调整对总结质量的影响。"
+      },
+      {
+        "file_type": "ppt",
+        "label": "PPT",
+        "path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week01.pptx",
+        "exists": true,
+        "preview_mode": "external_only",
+        "preview_text": null,
+        "ppt_id": null
+      }
+    ]
+  }
+}

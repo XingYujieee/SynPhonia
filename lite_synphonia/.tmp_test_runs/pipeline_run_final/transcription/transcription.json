@@ -1,0 +1,680 @@
+{
+  "runtime": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "chunk_duration_ms": 500,
+    "silence_floor": 0.003,
+    "input_gain": 1.0,
+    "target_rms": 0.03,
+    "max_gain": 2.0,
+    "limiter_level": 0.72,
+    "pre_emphasis_coeff": 0.97,
+    "language": "zh",
+    "has_initial_prompt": false,
+    "glossary_size": 0
+  },
+  "metrics": {
+    "mode": "direct_api",
+    "language": "zh",
+    "requested_seconds": 300.0,
+    "recorded_seconds": 300.0,
+    "sample_count": 4800000,
+    "chunk_count": 600,
+    "rms": 0.012725482694804668,
+    "peak": 0.5733235478401184,
+    "transcription_seconds": 30.606360625009984,
+    "raw_segments": 28,
+    "cleaned_segments": 28,
+    "filtered_segments": 0,
+    "emitted_segments": 28,
+    "final_segments": 28,
+    "transcribe_calls": 1
+  },
+  "events": [
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "f4d427858cd84e6aba36876a25e382d0",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 0.06,
+      "timestamp_end": 0.98,
+      "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+      "language": "zh-CN",
+      "confidence": 0.19886358,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 2
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "a2dd8de0d6a143eeaecccc9048212823",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 7.7700005,
+      "timestamp_end": 8.27,
+      "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+      "language": "zh-CN",
+      "confidence": 0.42541817,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "67daaf1dabd84d169b265cbfefb272b0",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 15.06,
+      "timestamp_end": 15.56,
+      "text": "可以看出照片的好看性或者是有更好的方法slide",
+      "language": "zh-CN",
+      "confidence": 0.21406688,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "4ea3894b86c042edae2a0c4d1fa2c25e",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 19.34,
+      "timestamp_end": 20.32,
+      "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+      "language": "zh-CN",
+      "confidence": 0.35879934,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 2
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "686ccaed0da64653ae750da81e15ea9b",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 60.18,
+      "timestamp_end": 60.68,
+      "text": "lpfand",
+      "language": "zh-CN",
+      "confidence": 0.9912451,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "dd7320469efb4661896dfd0662bf46f4",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 61.4,
+      "timestamp_end": 77.3,
+      "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+      "language": "zh-CN",
+      "confidence": 0.69000477,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 35
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "124f53a3fbe2461fba782552df5912aa",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 79.24,
+      "timestamp_end": 82.64,
+      "text": "we still had some graininessand slight blurring to deal withslide",
+      "language": "zh-CN",
+      "confidence": 0.6765663,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 10
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "d3e697fec24d4615b89286dd88209d4a",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 83.54,
+      "timestamp_end": 86.52,
+      "text": "4phase 2spatial filter baselinenext",
+      "language": "zh-CN",
+      "confidence": 0.7515385,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 4
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "5348bf7c73c1447bbab4a2c464845389",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 87.365,
+      "timestamp_end": 87.865,
+      "text": "we",
+      "language": "zh-CN",
+      "confidence": 0.24997494,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "4cc6e0488b9b4e2288bd4315320f47a0",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 88.71,
+      "timestamp_end": 89.21,
+      "text": "wondered",
+      "language": "zh-CN",
+      "confidence": 0.9591045,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "2cab66be3f71443aa1d5e3516b43d28f",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 90.055,
+      "timestamp_end": 90.555,
+      "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+      "language": "zh-CN",
+      "confidence": 0.45678127,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "b5575a53edfb4adc8cb5b7c580b9bb51",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 91.4,
+      "timestamp_end": 91.9,
+      "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+      "language": "zh-CN",
+      "confidence": 0.46980974,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "71dfb2fd83c84c4cad28cc5f6d0c6d75",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 98.29,
+      "timestamp_end": 98.79,
+      "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+      "language": "zh-CN",
+      "confidence": 0.635625,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "90a6c6b86fe74f798e6c6366ff40abc6",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 105.18,
+      "timestamp_end": 105.68,
+      "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+      "language": "zh-CN",
+      "confidence": 0.101136245,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "12419ba5bbdc42a2aa70a3f8d266adde",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 120.84,
+      "timestamp_end": 121.34,
+      "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+      "language": "zh-CN",
+      "confidence": 0.12508991,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "636d153fe0d14c4cb8f15dfd8a9f021f",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 135.3,
+      "timestamp_end": 135.8,
+      "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+      "language": "zh-CN",
+      "confidence": 0.9889551,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "9fc212b458ba4a72a5f6b53d7634bc58",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 150.06,
+      "timestamp_end": 151.34,
+      "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+      "language": "zh-CN",
+      "confidence": 0.70232344,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 2
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "7a78831dc6ff4aceb38a80c8e92b053e",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 157.95,
+      "timestamp_end": 158.45,
+      "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+      "language": "zh-CN",
+      "confidence": 0.51401395,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "4fb30cc0d8ae4929bc533db31f3b5b6d",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 165.06,
+      "timestamp_end": 165.56,
+      "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+      "language": "zh-CN",
+      "confidence": 0.1932261,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "c56bb6f66a39413dbbc97d9184daf289",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 180.18,
+      "timestamp_end": 180.68,
+      "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+      "language": "zh-CN",
+      "confidence": 0.66149706,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "e574c45829f8401b8e00cd85d617619f",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 195.84,
+      "timestamp_end": 196.34,
+      "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+      "language": "zh-CN",
+      "confidence": 0.9999901,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "181cb77fc6894db793f1a24658c8d528",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 210.06,
+      "timestamp_end": 210.56,
+      "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+      "language": "zh-CN",
+      "confidence": 0.7393591,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "003357f6ed254f23856f99dde2e69072",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 217.56,
+      "timestamp_end": 218.06,
+      "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+      "language": "zh-CN",
+      "confidence": 0.96504086,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "ae915eee45ee4b1384eba10f6a76407c",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 225.06,
+      "timestamp_end": 225.56,
+      "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+      "language": "zh-CN",
+      "confidence": 0.54753876,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "e68292f98f02410ea644c3fcc57e5a2e",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 232.36,
+      "timestamp_end": 232.86,
+      "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+      "language": "zh-CN",
+      "confidence": 0.78955394,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "5e6a2731d8c94e96ad91acf6b9a69521",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 255.06,
+      "timestamp_end": 255.56,
+      "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+      "language": "zh-CN",
+      "confidence": 0.104999125,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 3
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "b5e649d7f6a1482288a9116e4c0bfc81",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 270.06,
+      "timestamp_end": 270.56,
+      "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+      "language": "zh-CN",
+      "confidence": 0.98158723,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    },
+    {
+      "session_id": "d7728260393f427c92aa51b1290c6127",
+      "event_id": "9f164949ab0a4837ba9abbbc159bf029",
+      "source_chunk_id": "deepgram-api",
+      "timestamp_start": 286.4,
+      "timestamp_end": 286.9,
+      "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+      "language": "zh-CN",
+      "confidence": 0.64083743,
+      "is_final": true,
+      "model_name": "whisper-large",
+      "speaker_id": null,
+      "tokens_count": 1
+    }
+  ],
+  "results": [
+    {
+      "text": "早安 各位我們是群組23今天我們要討論如何將兩者的最佳化通過混合頻率和空間範圍測量但我們正在嘗試回答的真正問題是msc是否一個好方法能告訴我們照片的質素還是其他方法r",
+      "t0": 0.06,
+      "t1": 0.98,
+      "lang": "zh-CN",
+      "confidence": 0.19886358
+    },
+    {
+      "text": "問題分析我們要先解決問題我們需要先檢查照片從原始和fft的層面來看",
+      "t0": 7.7700005,
+      "t1": 8.27,
+      "lang": "zh-CN",
+      "confidence": 0.42541817
+    },
+    {
+      "text": "可以看出照片的好看性或者是有更好的方法slide",
+      "t0": 15.06,
+      "t1": 15.56,
+      "lang": "zh-CN",
+      "confidence": 0.21406688
+    },
+    {
+      "text": "r 問題分析我們要先解決問題我們需要先檢查照片看了原著和它的fft層次我們可以看出我們正在處理一個混亂的噪音我們有時鐘的線條你可以看到那些在中間的噪音和那些噪音的噪音所以我們有了四步的遊戲計畫我們要分析線條清理線條",
+      "t0": 19.34,
+      "t1": 20.32,
+      "lang": "zh-CN",
+      "confidence": 0.35879934
+    },
+    {
+      "text": "lpfand",
+      "t0": 60.18,
+      "t1": 60.68,
+      "lang": "zh-CN",
+      "confidence": 0.9912451
+    },
+    {
+      "text": "played around with the cutoff frequencyd at 70the stripes were still thereat 50the whole thing got way too blurrywe found that 60 was the goldilocks zoneit killed the stripesand brought our msc down to 0.0299but",
+      "t0": 61.4,
+      "t1": 77.3,
+      "lang": "zh-CN",
+      "confidence": 0.69000477
+    },
+    {
+      "text": "we still had some graininessand slight blurring to deal withslide",
+      "t0": 79.24,
+      "t1": 82.64,
+      "lang": "zh-CN",
+      "confidence": 0.6765663
+    },
+    {
+      "text": "4phase 2spatial filter baselinenext",
+      "t0": 83.54,
+      "t1": 86.52,
+      "lang": "zh-CN",
+      "confidence": 0.7515385
+    },
+    {
+      "text": "we",
+      "t0": 87.365,
+      "t1": 87.865,
+      "lang": "zh-CN",
+      "confidence": 0.24997494
+    },
+    {
+      "text": "wondered",
+      "t0": 88.71,
+      "t1": 89.21,
+      "lang": "zh-CN",
+      "confidence": 0.9591045
+    },
+    {
+      "text": "听越长听越长能不能做到它这里的音线是越小但是你用的全都好什么意思我看一下你这个软件是怎么做的还救出了个意外界面这个软件是怎么做的",
+      "t0": 90.055,
+      "t1": 90.555,
+      "lang": "zh-CN",
+      "confidence": 0.45678127
+    },
+    {
+      "text": "我们来看一下软件是怎么做的还就出了个ui界面这个软件是怎么做的它是用tls然后用那个tls网内也是tls对",
+      "t0": 91.4,
+      "t1": 91.9,
+      "lang": "zh-CN",
+      "confidence": 0.46980974
+    },
+    {
+      "text": "来个框架它上面有一个保密的路径用了一个它的一个包打包成一个里面还有node的位置",
+      "t0": 98.29,
+      "t1": 98.79,
+      "lang": "zh-CN",
+      "confidence": 0.635625
+    },
+    {
+      "text": "我们的片子管理也是贴着对然后有一个框架它上面也把那个弄成用了一个它的一个包把打包成一个里面还有弄的内核然后还有一个重量环境不试试把你这个实际的环境你还可以自己改我们将这样进行心理清华的重量化重量化对吧",
+      "t0": 105.18,
+      "t1": 105.68,
+      "lang": "zh-CN",
+      "confidence": 0.101136245
+    },
+    {
+      "text": "我们就把这些东西都组在一起我们建立了一个流程从lpf开始然后跟着空气温度lpf加上中等双方双方双方给了我们最传统的结果0.0294的mse这证明了两个阶段的进步是比较稳定的在互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互相互",
+      "t0": 120.84,
+      "t1": 121.34,
+      "lang": "zh-CN",
+      "confidence": 0.12508991
+    },
+    {
+      "text": "你会写吗?我觉得你是会的那我装头发你这上面为什么是乱码哪个他跟中间的到一起了哦这个中间太丑了他为什么写我这话筒写的太差了他根本不算计算机加好",
+      "t0": 135.3,
+      "t1": 135.8,
+      "lang": "zh-CN",
+      "confidence": 0.9889551
+    },
+    {
+      "text": "是冠军 因为它有最低的mse这话说的太大了那么更远多算计算机加好下次肯定可以你下次特定的时候你就一个多面形这样对对对",
+      "t0": 150.06,
+      "t1": 151.34,
+      "lang": "zh-CN",
+      "confidence": 0.70232344
+    },
+    {
+      "text": "错了你写一个命运然后就开始扫对这个上面没写什么地址然后不上去你写一个地址然后打报告",
+      "t0": 157.95,
+      "t1": 158.45,
+      "lang": "zh-CN",
+      "confidence": 0.51401395
+    },
+    {
+      "text": "你把这个东西读上去是这个命令然后就在扫对这个图纸上面没写什么地带然后不相信命运的数据然后很清晰这个是一个系统现在都加了一个好像是看到一个器子你这个是应用的这个是应用的中性应用好像是它的中转",
+      "t0": 165.06,
+      "t1": 165.56,
+      "lang": "zh-CN",
+      "confidence": 0.1932261
+    },
+    {
+      "text": "这个是一个系统这个是我们现在在讲的好多次看到一个7差不多看到一个7次你这个是应用的这个应用的这个应用的好像是它的中端我记得你今天换的那个你就知道我现在在说什么那确实是上一期也有中端为什么要换这个因为那次的中端也是这种我觉得那次的中端很实有点不客气这种你现在用到的软件都是很好的",
+      "t0": 180.18,
+      "t1": 180.68,
+      "lang": "zh-CN",
+      "confidence": 0.66149706
+    },
+    {
+      "text": "那确实上次也有中断为什么要因为windows的中断也是正常的我觉得windows的中断很实对你现在用的软件都是都是很好的就是传统意义上gy是是是再往前的时候所有的软件都是我知道对然后你把windows的软件我说这交给我用谁交给我我好奇你为什么这个",
+      "t0": 195.84,
+      "t1": 196.34,
+      "lang": "zh-CN",
+      "confidence": 0.9999901
+    },
+    {
+      "text": "在在在我们前面的时候所有的命运很转变都是在这里面我知道然后你就让那windows拉一拉我说这交给我我好奇你为什么要这个这个是做了一个配置就做了一个模块就像一把笔就里面有发动模来你从头把它定型这个叫omi",
+      "t0": 210.06,
+      "t1": 210.56,
+      "lang": "zh-CN",
+      "confidence": 0.7393591
+    },
+    {
+      "text": "edge你知道线啊我知道就是它是跟你线去连贯",
+      "t0": 217.56,
+      "t1": 218.06,
+      "lang": "zh-CN",
+      "confidence": 0.96504086
+    },
+    {
+      "text": "可以做一个美化就像一般的就里面有发动模来我们把它可以一键倒进去这个叫omi",
+      "t0": 225.06,
+      "t1": 225.56,
+      "lang": "zh-CN",
+      "confidence": 0.54753876
+    },
+    {
+      "text": "edge你知道线吗我知道就是它是跟你一种线去美化你的发光然后它会做一个比如说一组之间这两个l它后面这个s是它自己的自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s它自己的s",
+      "t0": 232.36,
+      "t1": 232.86,
+      "lang": "zh-CN",
+      "confidence": 0.78955394
+    },
+    {
+      "text": "如果你的滑動不夠聰明 你會毀掉畫質第十個 nlm的運作方法這就是nlm或非本地的應用你可以看到它的運作方法而不是只看圖片nlm會掃描整個圖片的圖片右邊可以看到它的運作方法這個軟體會找到適合我們的圖片黑色圖片",
+      "t0": 255.06,
+      "t1": 255.56,
+      "lang": "zh-CN",
+      "confidence": 0.104999125
+    },
+    {
+      "text": "这名字挺好看的这名字挺好看的嗯这名字挺有意思的你好厉害啊我好像黑人你很像之前那个老人那个他有服务器啊",
+      "t0": 270.06,
+      "t1": 270.56,
+      "lang": "zh-CN",
+      "confidence": 0.98158723
+    },
+    {
+      "text": "你好厉害啊感觉像黑人你很像之前那个老人那个他有服务器啊他都有自己的服务器啊",
+      "t0": 286.4,
+      "t1": 286.9,
+      "lang": "zh-CN",
+      "confidence": 0.64083743
+    }
+  ],
+  "transcription_quality": {
+    "decision": "pass",
+    "reason": "Transcript quality passed heuristic checks.",
+    "score": 1.0,
+    "stats": {
+      "segments": 28,
+      "chars": 2037,
+      "words": 79,
+      "mean_confidence": 0.5762,
+      "rms": 0.012725,
+      "peak": 0.573324
+    },
+    "checks": [
+      {
+        "name": "has_content",
+        "pass": true,
+        "value": 2037
+      },
+      {
+        "name": "confidence",
+        "pass": true,
+        "value": 0.5762
+      },
+      {
+        "name": "audio_level",
+        "pass": true,
+        "value": 0.012725
+      },
+      {
+        "name": "clipping",
+        "pass": true,
+        "value": false
+      },
+      {
+        "name": "glossary_hits",
+        "pass": true,
+        "value": 0
+      }
+    ]
+  },
+  "stage_status": {
+    "stage": "transcription",
+    "status": "success",
+    "reason": "Transcript quality passed heuristic checks.",
+    "details": {
+      "decision": "pass",
+      "score": 1.0
+    }
+  },
+  "glossary": {
+    "terms": [],
+    "prompt": ""
+  },
+  "preflight": null,
+  "transcription_backend": "deepgram_api"
+}

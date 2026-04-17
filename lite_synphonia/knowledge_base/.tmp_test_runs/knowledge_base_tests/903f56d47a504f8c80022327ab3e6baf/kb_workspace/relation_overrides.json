@@ -1,0 +1,11 @@
+[
+  {
+    "relation_id": "activity-classroom-002__activity-classroom-003",
+    "activity_a": "activity-classroom-002",
+    "activity_b": "activity-classroom-003",
+    "action": "confirm",
+    "strength": "medium",
+    "reason": "用户确认属于同一主线。",
+    "edited_at": "2026-04-15T13:33:39.009909"
+  }
+]

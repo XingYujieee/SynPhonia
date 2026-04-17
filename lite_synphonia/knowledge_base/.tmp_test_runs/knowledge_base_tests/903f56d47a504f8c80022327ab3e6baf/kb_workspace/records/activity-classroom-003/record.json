@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-003",
+  "start_time": "2026-04-10T09:00:00",
+  "end_time": "2026-04-10T09:30:00",
+  "summary_text": "本次以课程通知为主，同时轻度回顾窗口大小和总结质量。",
+  "keywords": [
+    "课程通知",
+    "窗口大小",
+    "总结质量"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/903f56d47a504f8c80022327ab3e6baf/kb_workspace/records/activity-classroom-003/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/903f56d47a504f8c80022327ab3e6baf/kb_workspace/records/activity-classroom-003/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/903f56d47a504f8c80022327ab3e6baf/assets/classroom_week02.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": "通知页和参数回顾页。",
+  "scene_type": "classroom"
+}

@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-meeting-002",
+  "start_time": "2026-04-09T14:00:00",
+  "end_time": "2026-04-09T15:10:00",
+  "summary_text": "活动继续沿着采购预算和成本控制主线推进。",
+  "keywords": [
+    "采购预算",
+    "成本控制",
+    "供应商计划"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/e13dc7dbdda5433a848bbc949568284e/kb_workspace/records/activity-meeting-002/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/e13dc7dbdda5433a848bbc949568284e/kb_workspace/records/activity-meeting-002/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/e13dc7dbdda5433a848bbc949568284e/assets/meeting_review.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "meeting"
+}

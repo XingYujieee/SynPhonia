@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-002",
+  "start_time": "2026-04-03T09:00:00",
+  "end_time": "2026-04-03T10:00:00",
+  "summary_text": "活动继续讲解 overlap、窗口大小和延迟预算。",
+  "keywords": [
+    "延迟预算",
+    "窗口大小",
+    "overlap"
+  ],
+  "transcript_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/4fb4f6aad1384fc387a77d08c4dc49f9/kb_workspace/records/activity-classroom-002/transcript.txt",
+  "summary_artifact_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/4fb4f6aad1384fc387a77d08c4dc49f9/kb_workspace/records/activity-classroom-002/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/sessions/fervent-wizardly-mayer/mnt/lite_synphonia/knowledge_base/.tmp_test_runs/knowledge_base_tests/4fb4f6aad1384fc387a77d08c4dc49f9/assets/classroom_week01.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "classroom"
+}

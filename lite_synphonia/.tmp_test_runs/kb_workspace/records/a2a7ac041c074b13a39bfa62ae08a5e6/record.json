@@ -1,0 +1,56 @@
+{
+  "activity_id": "a2a7ac041c074b13a39bfa62ae08a5e6",
+  "start_time": "2026-04-15T07:40:00.090209+00:00",
+  "end_time": "2026-04-15T07:44:46.930209+00:00",
+  "summary_text": "讲座探讨了通过混合频域和空间域方法来优化图像质量评估，质疑MSE是否足以衡量照片质量。首先通过FFT分析图像噪声，使用LPF在截止频率60处有效去除条纹噪声，将MSE降至0.0299。进而结合空间滤波器进行两阶段处理，进一步将MSE优化至0.0294，证明了该混合方法的稳定改进效果。",
+  "keywords": [
+    "MSE",
+    "FFT",
+    "LPF",
+    "截止频率",
+    "空间滤波器"
+  ],
+  "transcript_artifact_path": "/Users/xingyujie/Desktop/code/lite_synphonia/.tmp_test_runs/kb_workspace/records/a2a7ac041c074b13a39bfa62ae08a5e6/transcript.txt",
+  "summary_artifact_path": "/Users/xingyujie/Desktop/code/lite_synphonia/.tmp_test_runs/kb_workspace/records/a2a7ac041c074b13a39bfa62ae08a5e6/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/Users/xingyujie/Desktop/code/lite_synphonia/test_source/test.pdf",
+  "ppt_id": null,
+  "transcript_meta": {
+    "segment_count": 28,
+    "mean_confidence": 0.5762,
+    "recorded_seconds": 300.0,
+    "language": "zh"
+  },
+  "summary_meta": {
+    "rounds": 1,
+    "model": "deepseek-chat"
+  },
+  "matched_slides": [
+    {
+      "slide_index": 0,
+      "start_time": 0.06,
+      "end_time": 0.98,
+      "confidence": 0.6844
+    },
+    {
+      "slide_index": 1,
+      "start_time": 7.77,
+      "end_time": 20.32,
+      "confidence": 0.7328
+    },
+    {
+      "slide_index": 2,
+      "start_time": 60.18,
+      "end_time": 89.21,
+      "confidence": 0.716
+    },
+    {
+      "slide_index": 9,
+      "start_time": 90.055,
+      "end_time": 286.9,
+      "confidence": 0.8417
+    }
+  ],
+  "ppt_text_excerpt": "[{\"slide_index\": 0, \"text_preview\": \"频域与空域滤波的 协同效应研究 图像修复质量评估：超越传统像素级指标  探索“频域+空域”联合滤波在复杂图像修复中的协同效应 ⚠ 核⼼挑战：MSE 等传统指标在衡量真实视觉质量时的局限性 第 23 ⼩组 (Group 23) Resear\"}, {\"slide_index\": 1, \"text_preview\": \"问题诊断：混合噪声模型的特征分析 噪声识别与定位 1. 周期性条纹噪声 (Stripe Noise) 频域特征：FFT 频谱中离中⼼的亮脉冲，代表特定频率的周期⼲扰。 2. 椒盐噪声 (Salt-and-Pepper) 空域特征：随机分布的\"}, {\"slide_index\": 2, \"text_preview\": \"阶段⼀：频域滤波 (LPF) 的参数优化实验 算法配置 低通滤波器 (LPF) 主要⽤于滤除图像中的⾼频周期性条纹噪声。  核⼼变量：截⽌频率 ($D_0$) 截⽌频率对⽐实验 截⽌频率 \\u0000$D_0$) 修复表现 评价结论 $D_0 = \"}, {\"slide_index\": 9, \"text_preview\": \"核⼼算法：⾮局部均值 (NLM) ⼯作原理 像素邻域 (Local)  图像块相似性 (Patch Similarity) 1. 搜索与匹配 在预设的搜索窗⼝内，寻找与当前图像块 (Patch) 结构相似的区域，⽽⾮局 限于相邻像素。 2\"}]",
+  "scene_type": null
+}

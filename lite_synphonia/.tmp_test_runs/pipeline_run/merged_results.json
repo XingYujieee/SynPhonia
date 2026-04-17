@@ -1,0 +1,1332 @@
+{
+  "generated_at_utc": "2026-04-15T07:06:25.823101+00:00",
+  "source": {
+    "tool": "lite_synphonia",
+    "version": "0.1.0",
+    "run_started_at_utc": "2026-04-15T07:00:27.433064+00:00",
+    "transcription_provider": "deepgram",
+    "summarization_provider": "deepseek",
+    "embedding_provider": "",
+    "pdf_path": "",
+    "activity_id": ""
+  },
+  "stage_status": {
+    "transcription": {
+      "stage": "transcription",
+      "status": "success",
+      "reason": "Transcript quality passed heuristic checks.",
+      "details": {
+        "decision": "pass",
+        "score": 1.0
+      }
+    },
+    "summary": {
+      "stage": "summary",
+      "status": "success",
+      "reason": "Summary completed successfully.",
+      "upstream_dependency": "transcription",
+      "quality_decision": "pass",
+      "details": {
+        "active_backend": "api",
+        "provider": "deepseek"
+      }
+    },
+    "pdf_matching": {
+      "stage": "pdf_matching",
+      "status": "skipped",
+      "reason": "No PDF path provided."
+    }
+  },
+  "transcript": {
+    "source_label": "deepgram_api",
+    "unit_count": 40,
+    "word_count": 244,
+    "text": "这就是待会回来最忙的嗯\n网读一下要不给我搜吧这个可以啊现在换一个\n我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三\n問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍\n这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对\n这个画图画面就这些画的都不知道吗可以的\nd70strikewe\narewe\nfound that 60with the goldie lock soundkill\nthe stripes and brought our msc down to 0.0299but\nwe still have some greenness and slightto deal withface\ntospace filterwonderstandard\nmedian and gaussian filter were a bit of a disasterthey blurred everythingand\ngaussian actually had the worst msc at 0.0301the\nmedian filter was the clear winner herehitting an mse of 0.0178it's\ndefinitely the king of handling that salt and pepperslide\n5the pipeline integrationsince\nno single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf\nplus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎\nslide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well\nwe move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide\ncritical\nanalysis\n我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數\nmse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba\nssim評測\n就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页\nssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim\n测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo\n其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel\nperfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题\n我们的眼睛比完美图形更在乎结构第九个\n模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个\n也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian\nfilter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍\nnlm\nor non-local means comes inyou can see the workflow hereinstead\nof just averaging the pixels right next to each othernlm\nscans the whole area for patches that look similaron\nthe right you can see how it worksthe algorithm finds areas that match our target patch the dark blue boxthe better the match shown in darker green the more weight that area gets",
+    "units": [
+      {
+        "unit_id": 0,
+        "text": "这就是待会回来最忙的嗯",
+        "t0": 0.06,
+        "t1": 0.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 1,
+        "text": "网读一下要不给我搜吧这个可以啊现在换一个",
+        "t0": 2.56,
+        "t1": 3.06,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 2,
+        "text": "我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三",
+        "t0": 15.06,
+        "t1": 15.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 3,
+        "text": "問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍",
+        "t0": 30.08,
+        "t1": 30.76,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 4,
+        "text": "这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对",
+        "t0": 45.06,
+        "t1": 45.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 5,
+        "text": "这个画图画面就这些画的都不知道吗可以的",
+        "t0": 59.44,
+        "t1": 59.94,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 6,
+        "text": "d70strikewe",
+        "t0": 75.06,
+        "t1": 75.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 7,
+        "text": "arewe",
+        "t0": 80.14,
+        "t1": 80.64,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 8,
+        "text": "found that 60with the goldie lock soundkill",
+        "t0": 81.42,
+        "t1": 84.22,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 9,
+        "text": "the stripes and brought our msc down to 0.0299but",
+        "t0": 85.08,
+        "t1": 87.68,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 10,
+        "text": "we still have some greenness and slightto deal withface",
+        "t0": 89.34,
+        "t1": 92.64,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 11,
+        "text": "tospace filterwonderstandard",
+        "t0": 94.56,
+        "t1": 96.1,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 12,
+        "text": "median and gaussian filter were a bit of a disasterthey blurred everythingand",
+        "t0": 105.06,
+        "t1": 108.98,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 13,
+        "text": "gaussian actually had the worst msc at 0.0301the",
+        "t0": 109.74,
+        "t1": 112.7,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 14,
+        "text": "median filter was the clear winner herehitting an mse of 0.0178it's",
+        "t0": 114.64,
+        "t1": 118.88,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 15,
+        "text": "definitely the king of handling that salt and pepperslide",
+        "t0": 121.22,
+        "t1": 124.18,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 16,
+        "text": "5the pipeline integrationsince",
+        "t0": 125.28,
+        "t1": 127.06,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 17,
+        "text": "no single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf",
+        "t0": 128.16,
+        "t1": 137.0,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 18,
+        "text": "plus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎",
+        "t0": 138.3,
+        "t1": 143.16,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 19,
+        "text": "slide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well",
+        "t0": 150.48,
+        "t1": 160.94,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 20,
+        "text": "we move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide",
+        "t0": 165.84,
+        "t1": 174.04,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 21,
+        "text": "critical",
+        "t0": 176.53,
+        "t1": 177.03,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 22,
+        "text": "analysis",
+        "t0": 178.29999,
+        "t1": 178.79999,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 23,
+        "text": "我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數",
+        "t0": 180.06999,
+        "t1": 180.56999,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 24,
+        "text": "mse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba",
+        "t0": 181.84,
+        "t1": 182.34,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 25,
+        "text": "ssim評測",
+        "t0": 188.45,
+        "t1": 188.95,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 26,
+        "text": "就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页",
+        "t0": 195.06,
+        "t1": 195.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 27,
+        "text": "ssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim",
+        "t0": 204.92,
+        "t1": 206.54,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 28,
+        "text": "测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo",
+        "t0": 216.98,
+        "t1": 221.54999,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 29,
+        "text": "其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel",
+        "t0": 225.06,
+        "t1": 225.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 30,
+        "text": "perfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题",
+        "t0": 232.56,
+        "t1": 233.06,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 31,
+        "text": "我们的眼睛比完美图形更在乎结构第九个",
+        "t0": 240.06,
+        "t1": 240.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 32,
+        "text": "模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个",
+        "t0": 245.32,
+        "t1": 245.82,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 33,
+        "text": "也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian",
+        "t0": 255.06,
+        "t1": 255.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 34,
+        "text": "filter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍",
+        "t0": 261.54,
+        "t1": 262.04,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 35,
+        "text": "nlm",
+        "t0": 270.06,
+        "t1": 270.56,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 36,
+        "text": "or non-local means comes inyou can see the workflow hereinstead",
+        "t0": 272.78,
+        "t1": 277.58,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 37,
+        "text": "of just averaging the pixels right next to each othernlm",
+        "t0": 278.32,
+        "t1": 281.46,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 38,
+        "text": "scans the whole area for patches that look similaron",
+        "t0": 282.34,
+        "t1": 285.26,
+        "source": "deepgram_api"
+      },
+      {
+        "unit_id": 39,
+        "text": "the right you can see how it worksthe algorithm finds areas that match our target patch the dark blue boxthe better the match shown in darker green the more weight that area gets",
+        "t0": 286.0,
+        "t1": 297.8,
+        "source": "deepgram_api"
+      }
+    ]
+  },
+  "transcription": {
+    "runtime": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "chunk_duration_ms": 500,
+      "silence_floor": 0.003,
+      "input_gain": 1.0,
+      "target_rms": 0.03,
+      "max_gain": 2.0,
+      "limiter_level": 0.72,
+      "pre_emphasis_coeff": 0.97,
+      "language": "zh",
+      "has_initial_prompt": false,
+      "glossary_size": 0
+    },
+    "metrics": {
+      "mode": "direct_api",
+      "language": "zh",
+      "requested_seconds": 300.0,
+      "recorded_seconds": 300.0,
+      "sample_count": 4800000,
+      "chunk_count": 600,
+      "rms": 0.014803879894316196,
+      "peak": 0.7200000286102295,
+      "transcription_seconds": 52.89135662501212,
+      "raw_segments": 43,
+      "cleaned_segments": 40,
+      "filtered_segments": 3,
+      "emitted_segments": 40,
+      "final_segments": 40,
+      "transcribe_calls": 1
+    },
+    "events": [
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "6a2b7db0534549318b87b9ebb31a6e1b",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 0.06,
+        "timestamp_end": 0.56,
+        "text": "这就是待会回来最忙的嗯",
+        "language": "zh-CN",
+        "confidence": 0.8333592,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "cae4b2958ec14e5f829d51a1ea87945b",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 2.56,
+        "timestamp_end": 3.06,
+        "text": "网读一下要不给我搜吧这个可以啊现在换一个",
+        "language": "zh-CN",
+        "confidence": 0.9999682,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "ee3af530d8794edca6e6a0da0c165832",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 15.06,
+        "timestamp_end": 15.56,
+        "text": "我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三",
+        "language": "zh-CN",
+        "confidence": 0.16275367,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "55fc521a434e4133a4a860c877edbe8e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 30.08,
+        "timestamp_end": 30.76,
+        "text": "問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍",
+        "language": "zh-CN",
+        "confidence": 0.81716096,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "5a68acdc3643479fbbb233c72ceecfd9",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 45.06,
+        "timestamp_end": 45.56,
+        "text": "这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对",
+        "language": "zh-CN",
+        "confidence": 0.03410371,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "0002b5e450a74b1c88686ee79b7d0387",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 59.44,
+        "timestamp_end": 59.94,
+        "text": "这个画图画面就这些画的都不知道吗可以的",
+        "language": "zh-CN",
+        "confidence": 0.93964356,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "a79a6a3d9e2c495fb815c52f84c55f3e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 75.06,
+        "timestamp_end": 75.56,
+        "text": "d70strikewe",
+        "language": "zh-CN",
+        "confidence": 0.10412262,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "c18e5402168849a9a4b76d51d6dadc6c",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 80.14,
+        "timestamp_end": 80.64,
+        "text": "arewe",
+        "language": "zh-CN",
+        "confidence": 0.30402273,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "3f09f5ded7244df193cff591bc330a04",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 81.42,
+        "timestamp_end": 84.22,
+        "text": "found that 60with the goldie lock soundkill",
+        "language": "zh-CN",
+        "confidence": 0.4919797,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 7
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "6d456f7a911241b893e5be0023c88133",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 85.08,
+        "timestamp_end": 87.68,
+        "text": "the stripes and brought our msc down to 0.0299but",
+        "language": "zh-CN",
+        "confidence": 0.48727274,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 9
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "a925a433a483404aac94e99ae288b62d",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 89.34,
+        "timestamp_end": 92.64,
+        "text": "we still have some greenness and slightto deal withface",
+        "language": "zh-CN",
+        "confidence": 0.46071947,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 9
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "6a56051826b0437f8ec646ae0318b182",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 94.56,
+        "timestamp_end": 96.1,
+        "text": "tospace filterwonderstandard",
+        "language": "zh-CN",
+        "confidence": 0.2946418,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "360870ec99fc48d6b3a8d9743138d03e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 105.06,
+        "timestamp_end": 108.98,
+        "text": "median and gaussian filter were a bit of a disasterthey blurred everythingand",
+        "language": "zh-CN",
+        "confidence": 0.40303668,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 12
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "15a19abef8cb4f98a0c19fb660688591",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 109.74,
+        "timestamp_end": 112.7,
+        "text": "gaussian actually had the worst msc at 0.0301the",
+        "language": "zh-CN",
+        "confidence": 0.7433178,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 8
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "b2ee782574014d5985300ffac80a8942",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 114.64,
+        "timestamp_end": 118.88,
+        "text": "median filter was the clear winner herehitting an mse of 0.0178it's",
+        "language": "zh-CN",
+        "confidence": 0.7933786,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 11
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "d705fddf0e824ee8ac2962db1d62b576",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 121.22,
+        "timestamp_end": 124.18,
+        "text": "definitely the king of handling that salt and pepperslide",
+        "language": "zh-CN",
+        "confidence": 0.5255202,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 9
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "56deca2b215245239d054578b11272cb",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 125.28,
+        "timestamp_end": 127.06,
+        "text": "5the pipeline integrationsince",
+        "language": "zh-CN",
+        "confidence": 0.6799678,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 3
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "4506fab8d1c54de39a952c1f06c48e7d",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 128.16,
+        "timestamp_end": 137.0,
+        "text": "no single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf",
+        "language": "zh-CN",
+        "confidence": 0.7024272,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 24
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "71b1e4ced6034f618e01fe4ffbab24b1",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 138.3,
+        "timestamp_end": 143.16,
+        "text": "plus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎",
+        "language": "zh-CN",
+        "confidence": 0.49073187,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 6
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "3ea08e952d9b44989b8f3a028e1dc000",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 150.48,
+        "timestamp_end": 160.94,
+        "text": "slide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well",
+        "language": "zh-CN",
+        "confidence": 0.71159905,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 26
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "ce18a1e1bc5a4b22b971de8fbe3c3112",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 165.84,
+        "timestamp_end": 174.04,
+        "text": "we move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide",
+        "language": "zh-CN",
+        "confidence": 0.8125162,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 26
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "ea3a33e1458d43439a42df16fe56b007",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 176.53,
+        "timestamp_end": 177.03,
+        "text": "critical",
+        "language": "zh-CN",
+        "confidence": 0.9675875,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "d3137fe908844a69a86c9e7d3a491758",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 178.29999,
+        "timestamp_end": 178.79999,
+        "text": "analysis",
+        "language": "zh-CN",
+        "confidence": 0.105710484,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "4ae7c68c726745cd8405ef0be7051fb4",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 180.06999,
+        "timestamp_end": 180.56999,
+        "text": "我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數",
+        "language": "zh-CN",
+        "confidence": 0.9706734,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "a62557fd6d7d426a80920f8b824c1e6e",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 181.84,
+        "timestamp_end": 182.34,
+        "text": "mse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba",
+        "language": "zh-CN",
+        "confidence": 0.35381934,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "579df7ff16394f2da90ecf659c5e5b15",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 188.45,
+        "timestamp_end": 188.95,
+        "text": "ssim評測",
+        "language": "zh-CN",
+        "confidence": 0.20299199,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "ad8cc402336f407281a35438d0afc5d8",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 195.06,
+        "timestamp_end": 195.56,
+        "text": "就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页",
+        "language": "zh-CN",
+        "confidence": 0.026464978,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "ea7d0aa138a04876870378dd58e9388f",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 204.92,
+        "timestamp_end": 206.54,
+        "text": "ssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim",
+        "language": "zh-CN",
+        "confidence": 0.59131557,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 2
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "bc0b597c594c4e83bd8ef11aeaf34bd6",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 216.98,
+        "timestamp_end": 221.54999,
+        "text": "测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo",
+        "language": "zh-CN",
+        "confidence": 0.8037763,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 6
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "6f2804854cf9466ebb67ddb4c6d7d97d",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 225.06,
+        "timestamp_end": 225.56,
+        "text": "其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel",
+        "language": "zh-CN",
+        "confidence": 0.8509138,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "8e6ea5677f9c4b9eb802148678d572c8",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 232.56,
+        "timestamp_end": 233.06,
+        "text": "perfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题",
+        "language": "zh-CN",
+        "confidence": 0.14336957,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "fc6bffebdf0d4dd79843b02be809c531",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 240.06,
+        "timestamp_end": 240.56,
+        "text": "我们的眼睛比完美图形更在乎结构第九个",
+        "language": "zh-CN",
+        "confidence": 0.8668446,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "086778fd91074dd4ac177cef75ce46d5",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 245.32,
+        "timestamp_end": 245.82,
+        "text": "模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个",
+        "language": "zh-CN",
+        "confidence": 0.71997976,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "985026698efb4d228c066f3c80c8cf61",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 255.06,
+        "timestamp_end": 255.56,
+        "text": "也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian",
+        "language": "zh-CN",
+        "confidence": 0.07212696,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "4c4d0b50d9eb4fb4955aaea6962c91fd",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 261.54,
+        "timestamp_end": 262.04,
+        "text": "filter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍",
+        "language": "zh-CN",
+        "confidence": 0.4186629,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "abdccd1da793428496237d5d5f56bf01",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 270.06,
+        "timestamp_end": 270.56,
+        "text": "nlm",
+        "language": "zh-CN",
+        "confidence": 0.99622285,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 1
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "3b5bd899009e4af38db6a046f19a6566",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 272.78,
+        "timestamp_end": 277.58,
+        "text": "or non-local means comes inyou can see the workflow hereinstead",
+        "language": "zh-CN",
+        "confidence": 0.4874433,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 10
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "f5f6262e261a4f089d05e30c3acbf145",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 278.32,
+        "timestamp_end": 281.46,
+        "text": "of just averaging the pixels right next to each othernlm",
+        "language": "zh-CN",
+        "confidence": 0.72378826,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 10
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "e3e7f381bea344aca596b313a48d83a5",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 282.34,
+        "timestamp_end": 285.26,
+        "text": "scans the whole area for patches that look similaron",
+        "language": "zh-CN",
+        "confidence": 0.72306466,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 9
+      },
+      {
+        "session_id": "42580ef071aa4164a04e8440c6eb2994",
+        "event_id": "56457468eb384c208c6cd8ff65b7797a",
+        "source_chunk_id": "deepgram-api",
+        "timestamp_start": 286.0,
+        "timestamp_end": 297.8,
+        "text": "the right you can see how it worksthe algorithm finds areas that match our target patch the dark blue boxthe better the match shown in darker green the more weight that area gets",
+        "language": "zh-CN",
+        "confidence": 0.7141701,
+        "is_final": true,
+        "model_name": "whisper-large",
+        "speaker_id": null,
+        "tokens_count": 33
+      }
+    ],
+    "results": [
+      {
+        "text": "这就是待会回来最忙的嗯",
+        "t0": 0.06,
+        "t1": 0.56,
+        "lang": "zh-CN",
+        "confidence": 0.8333592
+      },
+      {
+        "text": "网读一下要不给我搜吧这个可以啊现在换一个",
+        "t0": 2.56,
+        "t1": 3.06,
+        "lang": "zh-CN",
+        "confidence": 0.9999682
+      },
+      {
+        "text": "我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三",
+        "t0": 15.06,
+        "t1": 15.56,
+        "lang": "zh-CN",
+        "confidence": 0.16275367
+      },
+      {
+        "text": "問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍",
+        "t0": 30.08,
+        "t1": 30.76,
+        "lang": "zh-CN",
+        "confidence": 0.81716096
+      },
+      {
+        "text": "这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对",
+        "t0": 45.06,
+        "t1": 45.56,
+        "lang": "zh-CN",
+        "confidence": 0.03410371
+      },
+      {
+        "text": "这个画图画面就这些画的都不知道吗可以的",
+        "t0": 59.44,
+        "t1": 59.94,
+        "lang": "zh-CN",
+        "confidence": 0.93964356
+      },
+      {
+        "text": "d70strikewe",
+        "t0": 75.06,
+        "t1": 75.56,
+        "lang": "zh-CN",
+        "confidence": 0.10412262
+      },
+      {
+        "text": "arewe",
+        "t0": 80.14,
+        "t1": 80.64,
+        "lang": "zh-CN",
+        "confidence": 0.30402273
+      },
+      {
+        "text": "found that 60with the goldie lock soundkill",
+        "t0": 81.42,
+        "t1": 84.22,
+        "lang": "zh-CN",
+        "confidence": 0.4919797
+      },
+      {
+        "text": "the stripes and brought our msc down to 0.0299but",
+        "t0": 85.08,
+        "t1": 87.68,
+        "lang": "zh-CN",
+        "confidence": 0.48727274
+      },
+      {
+        "text": "we still have some greenness and slightto deal withface",
+        "t0": 89.34,
+        "t1": 92.64,
+        "lang": "zh-CN",
+        "confidence": 0.46071947
+      },
+      {
+        "text": "tospace filterwonderstandard",
+        "t0": 94.56,
+        "t1": 96.1,
+        "lang": "zh-CN",
+        "confidence": 0.2946418
+      },
+      {
+        "text": "median and gaussian filter were a bit of a disasterthey blurred everythingand",
+        "t0": 105.06,
+        "t1": 108.98,
+        "lang": "zh-CN",
+        "confidence": 0.40303668
+      },
+      {
+        "text": "gaussian actually had the worst msc at 0.0301the",
+        "t0": 109.74,
+        "t1": 112.7,
+        "lang": "zh-CN",
+        "confidence": 0.7433178
+      },
+      {
+        "text": "median filter was the clear winner herehitting an mse of 0.0178it's",
+        "t0": 114.64,
+        "t1": 118.88,
+        "lang": "zh-CN",
+        "confidence": 0.7933786
+      },
+      {
+        "text": "definitely the king of handling that salt and pepperslide",
+        "t0": 121.22,
+        "t1": 124.18,
+        "lang": "zh-CN",
+        "confidence": 0.5255202
+      },
+      {
+        "text": "5the pipeline integrationsince",
+        "t0": 125.28,
+        "t1": 127.06,
+        "lang": "zh-CN",
+        "confidence": 0.6799678
+      },
+      {
+        "text": "no single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf",
+        "t0": 128.16,
+        "t1": 137.0,
+        "lang": "zh-CN",
+        "confidence": 0.7024272
+      },
+      {
+        "text": "plus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎",
+        "t0": 138.3,
+        "t1": 143.16,
+        "lang": "zh-CN",
+        "confidence": 0.49073187
+      },
+      {
+        "text": "slide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well",
+        "t0": 150.48,
+        "t1": 160.94,
+        "lang": "zh-CN",
+        "confidence": 0.71159905
+      },
+      {
+        "text": "we move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide",
+        "t0": 165.84,
+        "t1": 174.04,
+        "lang": "zh-CN",
+        "confidence": 0.8125162
+      },
+      {
+        "text": "critical",
+        "t0": 176.53,
+        "t1": 177.03,
+        "lang": "zh-CN",
+        "confidence": 0.9675875
+      },
+      {
+        "text": "analysis",
+        "t0": 178.29999,
+        "t1": 178.79999,
+        "lang": "zh-CN",
+        "confidence": 0.105710484
+      },
+      {
+        "text": "我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數",
+        "t0": 180.06999,
+        "t1": 180.56999,
+        "lang": "zh-CN",
+        "confidence": 0.9706734
+      },
+      {
+        "text": "mse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba",
+        "t0": 181.84,
+        "t1": 182.34,
+        "lang": "zh-CN",
+        "confidence": 0.35381934
+      },
+      {
+        "text": "ssim評測",
+        "t0": 188.45,
+        "t1": 188.95,
+        "lang": "zh-CN",
+        "confidence": 0.20299199
+      },
+      {
+        "text": "就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页",
+        "t0": 195.06,
+        "t1": 195.56,
+        "lang": "zh-CN",
+        "confidence": 0.026464978
+      },
+      {
+        "text": "ssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim",
+        "t0": 204.92,
+        "t1": 206.54,
+        "lang": "zh-CN",
+        "confidence": 0.59131557
+      },
+      {
+        "text": "测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo",
+        "t0": 216.98,
+        "t1": 221.54999,
+        "lang": "zh-CN",
+        "confidence": 0.8037763
+      },
+      {
+        "text": "其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel",
+        "t0": 225.06,
+        "t1": 225.56,
+        "lang": "zh-CN",
+        "confidence": 0.8509138
+      },
+      {
+        "text": "perfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题",
+        "t0": 232.56,
+        "t1": 233.06,
+        "lang": "zh-CN",
+        "confidence": 0.14336957
+      },
+      {
+        "text": "我们的眼睛比完美图形更在乎结构第九个",
+        "t0": 240.06,
+        "t1": 240.56,
+        "lang": "zh-CN",
+        "confidence": 0.8668446
+      },
+      {
+        "text": "模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个",
+        "t0": 245.32,
+        "t1": 245.82,
+        "lang": "zh-CN",
+        "confidence": 0.71997976
+      },
+      {
+        "text": "也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian",
+        "t0": 255.06,
+        "t1": 255.56,
+        "lang": "zh-CN",
+        "confidence": 0.07212696
+      },
+      {
+        "text": "filter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍",
+        "t0": 261.54,
+        "t1": 262.04,
+        "lang": "zh-CN",
+        "confidence": 0.4186629
+      },
+      {
+        "text": "nlm",
+        "t0": 270.06,
+        "t1": 270.56,
+        "lang": "zh-CN",
+        "confidence": 0.99622285
+      },
+      {
+        "text": "or non-local means comes inyou can see the workflow hereinstead",
+        "t0": 272.78,
+        "t1": 277.58,
+        "lang": "zh-CN",
+        "confidence": 0.4874433
+      },
+      {
+        "text": "of just averaging the pixels right next to each othernlm",
+        "t0": 278.32,
+        "t1": 281.46,
+        "lang": "zh-CN",
+        "confidence": 0.72378826
+      },
+      {
+        "text": "scans the whole area for patches that look similaron",
+        "t0": 282.34,
+        "t1": 285.26,
+        "lang": "zh-CN",
+        "confidence": 0.72306466
+      },
+      {
+        "text": "the right you can see how it worksthe algorithm finds areas that match our target patch the dark blue boxthe better the match shown in darker green the more weight that area gets",
+        "t0": 286.0,
+        "t1": 297.8,
+        "lang": "zh-CN",
+        "confidence": 0.7141701
+      }
+    ],
+    "transcription_quality": {
+      "decision": "pass",
+      "reason": "Transcript quality passed heuristic checks.",
+      "score": 1.0,
+      "stats": {
+        "segments": 40,
+        "chars": 2608,
+        "words": 244,
+        "mean_confidence": 0.5633,
+        "rms": 0.014804,
+        "peak": 0.72
+      },
+      "checks": [
+        {
+          "name": "has_content",
+          "pass": true,
+          "value": 2608
+        },
+        {
+          "name": "confidence",
+          "pass": true,
+          "value": 0.5633
+        },
+        {
+          "name": "audio_level",
+          "pass": true,
+          "value": 0.014804
+        },
+        {
+          "name": "clipping",
+          "pass": true,
+          "value": false
+        },
+        {
+          "name": "glossary_hits",
+          "pass": true,
+          "value": 0
+        }
+      ]
+    },
+    "stage_status": {
+      "stage": "transcription",
+      "status": "success",
+      "reason": "Transcript quality passed heuristic checks.",
+      "details": {
+        "decision": "pass",
+        "score": 1.0
+      }
+    },
+    "glossary": {
+      "terms": [],
+      "prompt": ""
+    },
+    "preflight": null,
+    "transcription_backend": "deepgram_api"
+  },
+  "summary": {
+    "generated_at_utc": "2026-04-15T07:06:25.820266+00:00",
+    "completed": true,
+    "config": {
+      "input_path": "lite_synphonia/.tmp_test_runs/pipeline_run/input/transcript.txt",
+      "output_path": "lite_synphonia/.tmp_test_runs/pipeline_run/summary/results.json",
+      "incremental_read_size": 1200,
+      "window_size": 200,
+      "overlap_size": 60,
+      "step_size": 140,
+      "llm_backend": "api",
+      "encoding": "utf-8",
+      "api": {
+        "base_url": "https://api.deepseek.com/v1",
+        "model_id": "deepseek-chat",
+        "api_key_env": "",
+        "max_new_tokens": 384,
+        "temperature": 0.1,
+        "timeout_seconds": 60.0,
+        "max_retries": 3,
+        "provider_name": "deepseek"
+      }
+    },
+    "results": [
+      {
+        "round_number": 1,
+        "window_start_index": 0,
+        "window_end_index": 199,
+        "input_word_count": 200,
+        "input_text": "这就是待会回来最忙的嗯 网读一下要不给我搜吧这个可以啊现在换一个 我們知道怎麼解決兩個世界的混合頻率和空間範圍的濾鏡但我們正在嘗試回答的真正問題是mse是一個好方法來測試畫面的質素嗎還是有更好的方法節目三 問題分析我們要解決問題之前我們要先解釋圖片的樣子看原始的圖片以及它的fft層次我們可以理解我們在清除的聲音是一團糟的我們有一個頻率的線條 問題分析我們要先解決問題我們要先解決問題看了原始的和它的fft波長我們知道我們在處理一大堆噪音我們有時鐘波你可以看到那些波子在波長中間加上那些噪音所以我們有了四個步驟我們分析波長清理波長的頻率範圍 这个是上的轮道它是靠这个逻辑所以这个我把它画出来它都放在这边这个也可以打开来走反正我们只要做反复的它把这个轮道反复进去反正我们就想画了对 这个画图画面就这些画的都不知道吗可以的 d70strikewe arewe found that 60with the goldie lock soundkill the stripes and brought our msc down to 0.0299but we still have some greenness and slightto deal withface tospace filterwonderstandard median and gaussian filter were a bit of a disasterthey blurred everythingand gaussian actually had the worst msc at 0.0301the median filter was the clear winner herehitting an mse of 0.0178it's definitely the king of handling that salt and pepperslide 5the pipeline integrationsince no single filter was perfectwe decided to change them togetherwe built a pipeline starting with the lpf and followed it up with special filterslpf plus media combobest resultmse0.0294 和空間濾鏡lpf加上中間濾鏡給我們最佳傳統結果mse 0.0294這證明了兩層的方向在對混合聲音的對戰中是更加穩定的第六項中間總結hook看起來你會認為單一中間濾鏡是冠軍因為它有最低的mse對吧不過這是一個拐彎 slide 6 midway summary the hook.so looking at the numbers you'd think the stand-alone median filter is the champion because it has the lowest mse right?well we move into our exploration phase we're going to show you why the best ranking on paper can actually look pretty bad to the human eye.slide critical analysis 我們進入了探索階段我們會為大家展示為什麼最佳的文字評級對人類眼睛的評級其實是很差的第七個階段關於mse的關鍵分析這就是讓人感到感興趣的地方mse是非常擅長計算屏幕錯誤但它完全無視了照片的實際結構我們的數據顯示儘管中間的濾鏡有很好的分數但它完全超越了所有的分數 mse是用pixel的方式但它完全無視照片的結構我們的數據顯示雖然中間的濾鏡有很高的分數但它完全無視所有的細節它基本上把細節變成塑膠這證明了我們需要更聰明的標準這就是為什麼我們要用ssimsli.ba ssim評測 就是把面料转成塑料这证明了我们需要更聪明的数据这就是为什么我们要用ssim下一页 ssim 测试为了让测试感觉更为人性化我们使用ssim不像mse那种只看着光源ssim 测试三个东西亮度 反光 最重要的是结构 ssim不像mse只看著色彩ssim 檢查三個東西光學對比最重要的是結構它是否在邊緣和質感上看起來是正確的但人類的評級改變了嗎媒體和濾鏡上一位獲勝者下降到第五位同時lpf和mean combo 其实看起来都很像但是人们的排名是怎么改变的呢我们的预测预测预测预测在第五名之后就下降了但是lpf和mean的组合却是最高的看来我们的眼睛比pixel perfect的数学更在乎结构第九个複乱的挑战就算是sfim我们也会遇到困难这些经典的预测都遇到了同样的问题 我们的眼睛比完美图形更在乎结构第九个 模糊挑战即使是sfim我们也碰到了一道牆这些经典的濾镜都有同样的问题它们是细分的也就是模糊的它们无法辨认噪音和刮刀的差异这些都是白的它们只要白的就会被诬陷你只要不懂得滑刀就会毁掉画质第十个 也就是一致的模糊他們無法分辨聲音和尖端的差別gaussian filter是這裡的最壞犯罪證明如果你的滑動不夠聰明你會毀掉畫質第十頁nlm的運作方式這就是nlm也就是非本地的工具的出現你可以看到這裡的運作而不是只看著屏幕nlm會掃描整個範圍 nlm or non-local means comes inyou can see the workflow hereinstead of just averaging the pixels right next to",
+        "keywords": [
+          "MSE",
+          "SSIM",
+          "median filter",
+          "LPF",
+          "noise reduction"
+        ],
+        "summary": "讲座分析了图像质量评估方法，指出MSE虽能计算像素误差但忽略结构信息，因此median filter虽MSE最低却导致细节丢失。进而引入SSIM指标，它综合亮度、对比度和结构进行评估，更符合人类视觉感知。最后提到传统滤波器如LPF和Gaussian filter会模糊图像，而NLM（非局部均值）方法通过扫描整个区域来更好区分噪声与细节。",
+        "status": "success",
+        "raw_response": "{\"keywords\":[\"MSE\",\"SSIM\",\"median filter\",\"LPF\",\"noise reduction\"],\"summary\":\"讲座分析了图像质量评估方法，指出MSE虽能计算像素误差但忽略结构信息，因此median filter虽MSE最低却导致细节丢失。进而引入SSIM指标，它综合亮度、对比度和结构进行评估，更符合人类视觉感知。最后提到传统滤波器如LPF和Gaussian filter会模糊图像，而NLM（非局部均值）方法通过扫描整个区域来更好区分噪声与细节。\"}",
+        "error_message": "",
+        "generation_seconds": 5.12
+      }
+    ],
+    "runtime": {
+      "active_backend": "api",
+      "provider_name": "deepseek",
+      "model_id": "deepseek-chat",
+      "round_count": 1,
+      "input_word_count": 244
+    },
+    "stage_status": {
+      "stage": "summary",
+      "status": "success",
+      "reason": "Summary completed successfully.",
+      "upstream_dependency": "transcription",
+      "quality_decision": "pass",
+      "details": {
+        "active_backend": "api",
+        "provider": "deepseek"
+      }
+    }
+  },
+  "pdf_matching": {
+    "stage_status": {
+      "stage": "pdf_matching",
+      "status": "skipped",
+      "reason": "No PDF path provided."
+    },
+    "completed": false,
+    "results": []
+  }
+}

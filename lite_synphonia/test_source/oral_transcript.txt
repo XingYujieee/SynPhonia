@@ -1,0 +1,24 @@
+Good morning. We are Group 23, and this Research Presentation studies the synergy of frequency-domain and spatial-domain filtering.
+Our core challenge is simple: MSE often looks precise, but it may not reflect real visual quality.
+We first diagnosed the mixed noise model with the FFT spectrum. The image contains stripe noise and salt-and-pepper noise.
+So our four-step strategy is spectrum analysis, LPF cleanup, spatial refinement with Median or NLM, and evaluation with MSE and SSIM.
+Stage one focuses on LPF parameter tuning. The key variable is the cutoff frequency D0 for removing periodic stripes.
+D0 at 70 under-filters, D0 at 50 over-smooths, and D0 at 60 gives the best balance with MSE 0.0299.
+Stage two tests baseline spatial filters: Mean, Gaussian, and Median.
+Gaussian is worst at 0.0301, Mean degrades edges, and Median reaches 0.0178 and handles impulse noise best.
+Then we built a hybrid pipeline by chaining LPF with spatial filtering.
+The best traditional combination is LPF plus Median, with MSE 0.0294 and stronger robustness on mixed noise.
+At this point the numbers create a visual illusion. The lowest MSE does not automatically mean the best-looking restoration.
+That is why we questioned whether the apparent winner on paper actually preserves local detail and texture.
+The scientific weakness of MSE is that it only measures pixel intensity error.
+Median lowers MSE but over-smooths texture, so we need a metric that respects structure instead of only brightness differences.
+Our upgraded evaluation uses SSIM, which compares luminance, contrast, and structure.
+With SSIM the ranking reverses: Median drops to fifth place, while LPF plus Mean rises to the top with SSIM 0.601.
+Classic filters still share a bottleneck: isotropic smoothing and weak edge-awareness.
+Gaussian shows this clearly with SSIM 0.507, because uniform smoothing destroys important structure.
+That leads to our core algorithm, NLM or Non-Local Means.
+NLM searches for similar patches, assigns weights by patch similarity, and preserves edges better than simple local averaging.
+Our final validation combines LPF with NLM as the ultimate solution.
+LPF plus NLM achieves the highest SSIM, 0.607, while keeping a strong MSE near 0.0293.
+So the final conclusion is structure first: collaborative frequency-domain and spatial-domain filtering is more reliable for mixed noise restoration.
+Thank you for listening. Group 23 concludes that SSIM is a better guide than MSE, and NLM gives the strongest final quality.

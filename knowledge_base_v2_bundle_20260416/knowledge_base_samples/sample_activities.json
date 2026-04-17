@@ -1,0 +1,113 @@
+[
+  {
+    "activity_id": "activity-classroom-001",
+    "start_time": "2026-04-01T09:00:00",
+    "end_time": "2026-04-01T10:15:00",
+    "transcript_text": "The teacher introduced concept mapping, overlap detection, and a note taking routine based on the week one slides. Students compared examples and asked how the review loop should be applied after class.",
+    "summary_text": "The class introduced concept mapping and overlap detection with the week one slide deck. The teacher also explained how a review loop should be used to organize notes after class.",
+    "summary_of_summary": "Introduced concept mapping and overlap detection.",
+    "keywords": [
+      "concept mapping",
+      "overlap detection",
+      "week one slides"
+    ],
+    "keywords_of_keywords": [
+      "learning design",
+      "review loop"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week01.pptx",
+    "activity_intro": "Week 1 classroom activity about concept mapping and note structure.",
+    "activity_name": "Week 1 concept workshop",
+    "scene_type": "classroom"
+  },
+  {
+    "activity_id": "activity-classroom-002",
+    "start_time": "2026-04-03T09:00:00",
+    "end_time": "2026-04-03T10:05:00",
+    "transcript_text": "The teacher revisited concept mapping and overlap detection on the same week one slides. Students built a reflection checklist and discussed how to connect the review loop to assignment preparation.",
+    "summary_text": "The second classroom session revisited concept mapping and overlap detection with the same slide deck. A reflection checklist was added so students could connect the review loop to assignment preparation.",
+    "summary_of_summary": "Revisited concept mapping and added a reflection checklist.",
+    "keywords": [
+      "concept mapping",
+      "overlap detection",
+      "reflection checklist"
+    ],
+    "keywords_of_keywords": [
+      "review loop",
+      "assignment preparation"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week01.pptx",
+    "activity_intro": "Follow-up classroom activity that extends the first workshop with a reflection checklist.",
+    "activity_name": "Week 1 checklist follow-up",
+    "scene_type": "classroom"
+  },
+  {
+    "activity_id": "activity-classroom-003",
+    "start_time": "2026-04-10T09:00:00",
+    "end_time": "2026-04-10T09:50:00",
+    "transcript_text": "The teacher opened a short checkpoint class about overlap detection, reflection, and concept review. Students used a new slide deck to compare earlier notes with a feedback checklist.",
+    "summary_text": "This checkpoint session revisited overlap detection, reflection, and concept review with a feedback checklist. The class used a new slide deck but continued the same classroom review routine.",
+    "summary_of_summary": "Checkpoint class on overlap detection and review.",
+    "keywords": [
+      "overlap detection",
+      "feedback checklist",
+      "concept review"
+    ],
+    "keywords_of_keywords": [
+      "review loop",
+      "checkpoint session"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/classroom_week02.pptx",
+    "activity_intro": "Checkpoint classroom activity that keeps the same review theme but uses a new deck.",
+    "activity_name": "Week 2 checkpoint class",
+    "scene_type": "classroom",
+    "ppt_text_excerpt": "Slides focus on overlap detection, concept review, and checklist prompts."
+  },
+  {
+    "activity_id": "activity-meeting-001",
+    "start_time": "2026-04-02T14:00:00",
+    "end_time": "2026-04-02T15:00:00",
+    "transcript_text": "The meeting focused on budget review, risk tracking, and the first version of the procurement timeline. Team members discussed cost pressure and the need for a shared risk register.",
+    "summary_text": "The meeting covered budget review, cost pressure, and a shared risk register for the procurement timeline.",
+    "summary_of_summary": "Budget review and risk tracking kickoff.",
+    "keywords": [
+      "budget review",
+      "risk register",
+      "procurement timeline"
+    ],
+    "keywords_of_keywords": [
+      "cost control",
+      "project planning"
+    ],
+    "ppt_present": false,
+    "activity_intro": "Project meeting about budget pressure and procurement planning.",
+    "activity_name": "Budget planning kickoff",
+    "scene_type": "meeting"
+  },
+  {
+    "activity_id": "activity-meeting-002",
+    "start_time": "2026-04-09T14:00:00",
+    "end_time": "2026-04-09T15:10:00",
+    "transcript_text": "The follow-up meeting returned to budget review, risk register updates, and supplier timing. The team used the budget review slide deck to confirm cost control actions and next steps.",
+    "summary_text": "The follow-up meeting revisited budget review and the risk register. The team used the budget review deck to align cost control actions and supplier timing.",
+    "summary_of_summary": "Follow-up budget review with updated risk actions.",
+    "keywords": [
+      "budget review",
+      "risk register",
+      "cost control"
+    ],
+    "keywords_of_keywords": [
+      "project planning",
+      "supplier timing"
+    ],
+    "ppt_present": true,
+    "ppt_file_path": "assets/meeting_budget_review.pptx",
+    "activity_intro": "Follow-up project meeting that updates cost control and supplier timing.",
+    "activity_name": "Budget review follow-up",
+    "scene_type": "meeting",
+    "ppt_text_excerpt": "Slides summarize budget review decisions and supplier timing."
+  }
+]

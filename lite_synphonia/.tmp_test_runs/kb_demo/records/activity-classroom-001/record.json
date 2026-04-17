@@ -1,0 +1,21 @@
+{
+  "activity_id": "activity-classroom-001",
+  "start_time": "2026-04-01T09:00:00",
+  "end_time": "2026-04-01T10:15:00",
+  "summary_text": "本次活动主要介绍课堂总结系统中的延迟预算、增量读取和窗口大小，强调系统必须在实时性和稳定性之间取得平衡。",
+  "keywords": [
+    "延迟预算",
+    "增量读取",
+    "窗口大小"
+  ],
+  "transcript_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-001/transcript.txt",
+  "summary_artifact_path": ".tmp_test_runs/kb_demo/records/activity-classroom-001/summary.txt",
+  "ppt_present": true,
+  "ppt_file_path": "/Users/xingyujie/Desktop/code/lite_synphonia/knowledge_base/samples/assets/classroom_week01.pptx",
+  "ppt_id": null,
+  "transcript_meta": {},
+  "summary_meta": {},
+  "matched_slides": [],
+  "ppt_text_excerpt": null,
+  "scene_type": "classroom"
+}
