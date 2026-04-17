@@ -1,3 +1,5 @@
+
+![SynPhonia](demo/2881776411666_.pic.jpg)
 # SynPhonia
 
 面向课堂与会议现场的应用型原型项目，聚焦流式实时转录接入、增量式总结、桌面端信息展示与知识沉淀。
@@ -50,28 +52,32 @@ SynPhonia 是一个以桌面端为主的可运行 MVP：
 ### 已实现的用户功能
 
 - 课件工作区管理
+  ![Upload](demo/upload.gif)
   - 上传 `PDF / PPT / PPTX` 后自动创建缓存工作区
   - 支持恢复历史工作区、重命名、收藏、删除
-- 课件预览
-  - 使用 `pdf.js` 渲染 PDF
-  - 支持缩放、翻页、文本层渲染与自动跳页
-  - `PPT / PPTX` 可调用 LibreOffice 转换为 PDF 后预览
 - 实时流式转录
+  ![Transform](demo/transform.gif)
   - 前端通过 `Web Audio API` 采集麦克风
   - 以 `16kHz / 单声道 / PCM16` 小片段推送到 Electron 主进程
   - 主进程维护 Deepgram WebSocket，接收 partial / final 结果并持久化
 - 增量式摘要
+  ![Conclusion](demo/conclusion.gif)
   - 转录累计到阈值后自动触发窗口摘要
   - 静音时会做一次补刷，避免尾段内容长期挂起
 - 课件页码匹配
+  ![Match](demo/match.gif)
   - 当工作区存在 PDF 时，系统会基于转录片段与课件文本做页码关联
   - 结果可反向驱动预览页跳转
 - 上下文问答
+  ![Question](demo/question.gif)
   - 问答不依赖单独后端服务
   - 回答优先使用当前工作区中的 `summary.full.json`、`transcription.full.json` 和匹配到的 PDF 页面内容
 - 知识库与知识图谱
+  ![Review](demo/review.gif)
   - 可从工作区产物重建活动记录
   - 提供总览、图谱、文件预览三类面板
+
+完整视频链接: 
 
 ### 代码层面的关键策略
 
