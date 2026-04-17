@@ -1,7 +1,7 @@
 # SynPhonia
 
 面向课堂与会议现场的应用型原型项目，聚焦流式实时转录接入、增量式总结、桌面端信息展示与知识沉淀。
-
+https://github.com/user-attachments/assets/5aef380c-c9a0-4445-a2b3-f9e81cf949e4
 ## 项目简介
 
 > It’s time to empower real-time voice with AI!
